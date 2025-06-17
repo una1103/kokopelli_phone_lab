@@ -2,152 +2,229 @@
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>詠粸麗 美甲工作室｜YCL Nail Studio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>詠粸麗 美甲工作室 | YCL Nail Studio</title>
   <style>
+    /* 主要色調 */
     body {
-      background: #fff0f5;
-      color: #663366;
-      font-family: 'Segoe UI', '微軟正黑體', sans-serif;
       margin: 0;
-      padding: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fdfaf6; /* 米色背景 */
+      color: #4a3f2f; /* 深咖啡文字 */
     }
-    a { text-decoration: none; }
     header {
-      background: #ffe4f0;
-      padding: 20px 20px;
-      text-align: center;
-    }
-    header img.logo {
-      max-width: 140px;
-      border-radius: 12px;
-    }
-    header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 6px;
-      color: #cc6699;
-    }
-    header p { font-size: 1.1rem; }
-
-    section {
-      padding: 40px 20px;
-      max-width: 900px;
-      margin: auto;
-    }
-
-    h2 {
-      color: #cc6699;
-      border-bottom: 2px dashed #f9c5d1;
-      padding-bottom: 8px;
-      margin-bottom: 20px;
-    }
-
-    ul { list-style: none; padding: 0; }
-    li { margin: 6px 0; font-size: 17px; }
-
-    .contact-buttons {
-      text-align: center;
-      margin-top: 20px;
-    }
-    .contact-buttons a {
-      display: inline-block;
-      background-color: #ff99cc;
+      background-color: #b58c44; /* 金色調 */
       color: white;
       padding: 12px 20px;
-      border-radius: 30px;
-      margin: 10px;
-      font-weight: bold;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      transition: 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
-    .contact-buttons a:hover {
-      background-color: #ff66aa;
+    header img.logo {
+      height: 50px;
+      object-fit: contain;
     }
-
-    .map-container {
-      text-align: center;
-      margin-top: 30px;
+    nav button {
+      background: none;
+      border: none;
+      color: white;
+      font-weight: 700;
+      font-size: 16px;
+      cursor: pointer;
+      margin-left: 15px;
+      padding: 6px 10px;
     }
-
-    iframe {
-      border: 0;
-      width: 100%;
-      max-width: 800px;
-      height: 300px;
-      border-radius: 12px;
+    nav button:hover {
+      background-color: #9c7540;
+      border-radius: 4px;
     }
-
+    main {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+    h1, h2 {
+      font-weight: 700;
+      color: #b58c44;
+    }
+    .service-list {
+      list-style: none;
+      padding: 0;
+    }
+    .service-list li {
+      margin-bottom: 10px;
+      font-size: 18px;
+      line-height: 1.4;
+    }
+    /* 按鈕群組 */
+    .button-group {
+      margin: 30px 0;
+    }
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #b58c44;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+      font-size: 16px;
+    }
+    .btn:hover {
+      background-color: #9c7540;
+    }
+    .button-group a + a {
+      margin-left: 14px;
+    }
     footer {
-      background: #ffe4f0;
+      margin-top: 40px;
+      background-color: #b58c44;
+      color: white;
       text-align: center;
-      padding: 30px 20px;
-      font-size: 14px;
-      color: #663366;
+      padding: 20px 10px;
+    }
+    footer .social-buttons a {
+      display: inline-block;
+      margin: 0 8px;
+      color: white;
+      font-weight: 700;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      background-color: #9c7540;
+      transition: background-color 0.3s ease;
+    }
+    footer .social-buttons a:hover {
+      background-color: #7b6233;
+    }
+    /* Google Map 區 */
+    .map-container {
+      margin-top: 40px;
+      text-align: center;
+    }
+    .address-text {
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+    iframe {
+      border: none;
+      width: 100%;
+      max-width: 600px;
+      height: 300px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
     }
   </style>
 </head>
 <body>
+  <header>
+    <!-- LOGO 請替換成你的圖片路徑 -->
+    <img src="images/logo.png" alt="詠粸麗 美甲工作室 Logo" class="logo" />
+    <nav>
+      <button onclick="setLanguage('zh')">中文</button>
+      <button onclick="setLanguage('en')">English</button>
+    </nav>
+  </header>
 
-<header>
-  <img src="images/S__27181065.jpg" alt="Logo" class="logo">
-  <h1>詠粸麗 美甲工作室</h1>
-  <p>YCL Nail Studio</p>
-</header>
+  <main>
+    <!-- 中文內容 -->
+    <section id="content-zh">
+      <h1>詠粸麗 美甲工作室</h1>
+      <p>地址：404台中市北區精武路266-7號</p>
+      <h2>服務介紹</h2>
+      <ul class="service-list">
+        <li><strong>手部</strong></li>
+        <li>純基礎保養 500元</li>
+        <li>深層保養 1299元</li>
+        <li>一般甲油 800元（含基礎保養）</li>
+        <li>單色凝膠 1000元（含基礎保養）</li>
+        <li>設計款 1250元起</li>
+        <li><strong>足部</strong></li>
+        <li>純基礎保養 800元</li>
+        <li>一般甲油 1000元（含基礎保養）</li>
+        <li>單色凝膠 1200元（含基礎保養、可跳一色）</li>
+        <li>設計凝膠 1400元起</li>
+        <li><strong>設計</strong></li>
+        <li>延甲（單指） 100元</li>
+        <li>單指彩繪 30元起</li>
+        <li>飾品/貼紙 單指 10元起</li>
+        <li>鑽 單指 30元起</li>
+        <li><strong>卸甲（本店續作含卸甲服務）</strong></li>
+        <li>本店卸甲 200元（續作則免）</li>
+        <li>他店卸甲 300元</li>
+        <li>水晶卸甲 600元</li>
+      </ul>
 
-<section id="services">
-  <h2>服務介紹</h2>
-  <h3>手部</h3>
-  <ul>
-    <li>純基礎保養 - NT$500</li>
-    <li>深層保養 - NT$1299</li>
-    <li>一般甲油（含基礎保養） - NT$800</li>
-    <li>單色凝膠（含基礎保養） - NT$1000</li>
-    <li>設計款 - NT$1250 起</li>
-  </ul>
-  <h3>足部</h3>
-  <ul>
-    <li>純基礎保養 - NT$800</li>
-    <li>一般甲油（含基礎保養） - NT$1000</li>
-    <li>單色凝膠（含基礎保養、可跳一色） - NT$1200</li>
-    <li>設計凝膠 - NT$1400 起</li>
-  </ul>
-  <h3>設計</h3>
-  <ul>
-    <li>延甲（單指） - NT$100</li>
-    <li>單指彩繪 - NT$30 起</li>
-    <li>飾品／貼紙單指 - NT$10 起</li>
-    <li>鑽單指 - NT$30 起</li>
-  </ul>
-  <h3>卸甲</h3>
-  <ul>
-    <li>本店卸甲 - NT$200（如續作則免）</li>
-    <li>他店卸甲 - NT$300</li>
-    <li>水晶卸甲 - NT$600</li>
-  </ul>
-</section>
+      <div class="button-group">
+        <a href="https://line.me/R/ti/p/@166kslla" target="_blank" rel="noopener noreferrer" class="btn">LINE 預約</a>
+        <a href="tel:0922828611" class="btn">立即通話</a>
+        <a href="quiz.html" class="btn">心理測驗</a>
+      </div>
+    </section>
 
-<section id="contact">
-  <h2>立即預約</h2>
-  <div class="contact-buttons">
-    <a href="https://line.me/R/ti/p/@166kslla" target="_blank">LINE 預約</a>
-    <a href="https://www.instagram.com/ycl_nail.studio" target="_blank">IG 私訊</a>
-    <a href="tel:0922828611">電話預約</a>
-  </div>
+    <!-- English content -->
+    <section id="content-en" style="display:none;">
+      <h1>YCL Nail Studio</h1>
+      <p>Address: No.266-7, Jingwu Rd., North Dist., Taichung City 404, Taiwan</p>
+      <h2>Services & Prices</h2>
+      <ul class="service-list">
+        <li><strong>Hand Care</strong></li>
+        <li>Basic Care 500 TWD</li>
+        <li>Deep Care 1299 TWD</li>
+        <li>Regular Nail Polish 800 TWD (including basic care)</li>
+        <li>Single Color Gel 1000 TWD (including basic care)</li>
+        <li>Design starts at 1250 TWD</li>
+        <li><strong>Foot Care</strong></li>
+        <li>Basic Care 800 TWD</li>
+        <li>Regular Nail Polish 1000 TWD (including basic care)</li>
+        <li>Single Color Gel 1200 TWD (including basic care, can do one color jump)</li>
+        <li>Design Gel starts at 1400 TWD</li>
+        <li><strong>Design</strong></li>
+        <li>Extension (per finger) 100 TWD</li>
+        <li>Single Finger Nail Art starts at 30 TWD</li>
+        <li>Accessories/Stickers per finger starts at 10 TWD</li>
+        <li>Rhinestones per finger starts at 30 TWD</li>
+        <li><strong>Removal (including in-store continuation)</strong></li>
+        <li>Removal in store 200 TWD (free if continued)</li>
+        <li>Removal at other stores 300 TWD</li>
+        <li>Crystal Removal 600 TWD</li>
+      </ul>
 
-  <div class="map-container">
-    <p>地址：404台中市北區精武路266-7號</p>
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3641.4310495287414!2d120.68879547518753!3d24.151917078413065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693d9f4dc94e99%3A0x96aeb6de2159e67e!2z5aSn5YyX5rKZIOaWsOWbvuS4iemZog!5e0!3m2!1szh-TW!2stw!4v1718640325310!5m2!1szh-TW!2stw"
-      allowfullscreen=""
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
-  </div>
-</section>
+      <div class="button-group">
+        <a href="https://line.me/R/ti/p/@166kslla" target="_blank" rel="noopener noreferrer" class="btn">LINE Booking</a>
+        <a href="tel:0922828611" class="btn">Call Now</a>
+        <a href="quiz.html" class="btn">Nail Quiz</a>
+      </div>
+    </section>
+  </main>
 
-<footer>
-  <p>© 2025 詠粸麗 YCL Nail Studio | 台中市北區精武路266-7號</p>
-</footer>
+  <footer>
+    <div class="social-buttons">
+      <a href="https://line.me/R/ti/p/@166kslla" target="_blank" rel="noopener noreferrer">LINE</a>
+      <a href="https://www.instagram.com/ycl_nail.studio" target="_blank" rel="noopener noreferrer">IG</a>
+      <a href="tel:0922828611">電話</a>
+    </div>
+    <div class="map-container">
+      <p class="address-text">地址：404台中市北區精武路266-7號</p>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3624.741783899599!2d120.6793795146434!3d24.162489184415327!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3469147aa391fbcf%3A0xf964f4e6e43f5640!2z5Lit5paw5p2x5Y2A6YWc5a6u5q2j5b2T5b2x5Lqs6YeN5q61!5e0!3m2!1szh-TW!2stw!4v1687012345678!5m2!1szh-TW!2stw"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </footer>
 
+  <script>
+    function setLanguage(lang) {
+      if (lang === "en") {
+        document.getElementById("content-en").style.display = "block";
+        document.getElementById("content-zh").style.display = "none";
+      } else {
+        document.getElementById("content-en").style.display = "none";
+        document.getElementById("content-zh").style.display = "block";
+      }
+    }
+  </script>
 </body>
 </html>
