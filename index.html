@@ -1,179 +1,156 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>詠粸麗 美甲工作室｜YCL Nail Studio</title>
-<style>
-/* Reset & 基礎 */
-body, h1, h2, p, ul, li, a, input, textarea, button {
-  margin:0;padding:0;font-family:'Noto Sans TC',sans-serif;
-}
-body { background:#faf5f0;color:#524239; }
-a { text-decoration:none; }
-
-/* Header / Hero */
-header {
-  background: url('images/hero-bg.jpg') center/cover no-repeat;
-  height: 60vh; min-height: 400px;
-  display:flex;flex-direction:column;justify-content:center;align-items:center;
-  position:relative;
-}
-header::after { content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(255,255,255,0.6); }
-header h1 {
-  position:relative;font-size:3rem;color:#bfa16a;margin-bottom:10px;
-}
-#hero-cta {
-  position:relative;margin-top:20px;
-}
-#hero-cta a {
-  background:#bfa16a;color:#fff;padding:12px 24px;border-radius:5px;margin:0 10px;
-  font-weight:600;transition:0.3s;
-}
-#hero-cta a:hover { background:#867245; }
-
-/* Main */
-main { max-width:900px;margin:40px auto;padding:0 20px; }
-
-/* Services */
-#services h2 { color:#bfa16a;border-bottom:2px solid #e3d6c1;padding-bottom:8px;margin-bottom:20px; }
-#services ul { list-style:none; }
-#services li { margin:10px 0;font-size:18px; }
-
-/* Gallery */
-#gallery h2 { color:#bfa16a;border-bottom:2px solid #e3d6c1;padding-bottom:8px;margin-bottom:20px; }
-.gallery {
-  display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:15px;
-}
-.gallery img {
-  width:100%;border-radius:8px;cursor:pointer;
-  transition:transform 0.3s;
-}
-.gallery img:hover { transform:scale(1.05); }
-
-/* Modal */
-.modal {
-  display:none;position:fixed;top:0;left:0;width:100%;height:100%;
-  background:rgba(0,0,0,0.8);justify-content:center;align-items:center;
-}
-.modal img { max-width:90%;max-height:90%;border-radius:8px; }
-.modal span {
-  position:absolute;top:20px;right:30px;font-size:40px;color:#fff;
-  cursor:pointer;
-}
-
-/* Contact & Form */
-#contact, #products, #location, footer { margin-bottom:50px; }
-form { max-width:400px;margin:20px 0; }
-form input, form textarea {
-  width:100%;padding:10px;margin-bottom:12px;border:1px solid #bfa16a;border-radius:4px;
-}
-form button {
-  background:#bfa16a;color:#fff;padding:10px 20px;border:none;border-radius:4px;
-  cursor:pointer;font-weight:600;
-}
-form button:hover { background:#867245; }
-
-/* Products Display */
-.products {
-  display:flex;flex-wrap:wrap;gap:20px;
-}
-.product-item {
-  flex:1 1 250px;border:1px solid #bfa16a;border-radius:8px;padding:15px;
-}
-.product-item h3 { margin-bottom:8px;color:#8a6b3f; }
-
-/* Footer */
-footer { background:#f0e1d3;padding:20px;text-align:center;font-size:14px;color:#8a6b3f; }
-
-/* Responsive */
-@media(max-width:600px){
-  header h1 { font-size:2.2rem; }
-  #hero-cta a { margin:8px 0;display:block; }
-}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>詠粸麗 美甲工作室｜YCL Nail Studio</title>
+  <style>
+    body {
+      background: #faf5f0;
+      color: #524239;
+      font-family: 'Noto Sans TC', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    a { text-decoration: none; color: #bfa16a; }
+    header {
+      background: #fff8f0;
+      padding: 20px 20px;
+      text-align: center;
+    }
+    header img.logo {
+      max-width: 160px;
+      margin-bottom: 10px;
+    }
+    header h1 {
+      font-size: 2.6rem;
+      margin-bottom: 6px;
+      color: #bfa16a;
+    }
+    header p { font-size: 1.1rem; }
+    section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    h2 {
+      color: #bfa16a;
+      border-bottom: 2px solid #e3d6c1;
+      padding-bottom: 8px;
+      margin-bottom: 20px;
+    }
+    ul { list-style: none; padding: 0; }
+    li { margin: 6px 0; font-size: 17px; }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 12px;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 8px;
+    }
+    .contact-links a.button {
+      display: inline-block;
+      background-color: #bfa16a;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 6px;
+      margin: 8px 5px;
+      font-weight: bold;
+    }
+    footer {
+      background: #f6f0e8;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+  </style>
 </head>
 <body>
 
 <header>
+  <img src="images/logo.png" alt="Logo" class="logo">
   <h1>詠粸麗 美甲工作室</h1>
-  <div id="hero-cta">
-    <a href="https://line.me/R/ti/p/%40166kslla" target="_blank">LINE 預約</a>
-    <a href="tel:0922828611">立即通話</a>
-  </div>
+  <p>YCL Nail Studio</p>
+  <p>404台中市北區精武路266-7號</p>
 </header>
 
-<main>
-  <section id="services">
-    <h2>服務介紹</h2>
-    <ul>
-      <li>基礎指甲護理 - NT$800</li>
-      <li>法式美甲 - NT$1500</li>
-      <li>3D 立體設計 - NT$2500</li>
-      <li>光療凝膠 - NT$2000</li>
-    </ul>
-  </section>
+<section id="services">
+  <h2>服務介紹</h2>
+  <h3>手部</h3>
+  <ul>
+    <li>純基礎保養 - NT$500</li>
+    <li>深層保養 - NT$1299</li>
+    <li>一般甲油（含基礎保養） - NT$800</li>
+    <li>單色凝膠（含基礎保養） - NT$1000</li>
+    <li>設計款 - NT$1250 起</li>
+  </ul>
+  <h3>足部</h3>
+  <ul>
+    <li>純基礎保養 - NT$800</li>
+    <li>一般甲油（含基礎保養） - NT$1000</li>
+    <li>單色凝膠（含基礎保養、可跳一色） - NT$1200</li>
+    <li>設計凝膠 - NT$1400 起</li>
+  </ul>
+  <h3>設計</h3>
+  <ul>
+    <li>延甲（單指） - NT$100</li>
+    <li>單指彩繪 - NT$30 起</li>
+    <li>飾品／貼紙單指 - NT$10 起</li>
+    <li>鑽單指 - NT$30 起</li>
+  </ul>
+  <h3>卸甲</h3>
+  <ul>
+    <li>本店卸甲 - NT$200（如續作則免）</li>
+    <li>他店卸甲 - NT$300</li>
+    <li>水晶卸甲 - NT$600</li>
+  </ul>
+</section>
 
-  <section id="gallery">
-    <h2>作品集</h2>
-    <div class="gallery">
-      <img src="images/nail1.jpg" alt="作品1">
-      <img src="images/nail2.jpg" alt="作品2">
-      <img src="images/nail3.jpg" alt="作品3">
-      <img src="images/nail4.jpg" alt="作品4">
-    </div>
-  </section>
-
-  <div id="gallery-modal" class="modal">
-    <span onclick="this.parentElement.style.display='none'">&times;</span>
-    <img id="modal-img" src="" alt="放大作品">
+<section id="gallery">
+  <h2>作品集</h2>
+  <div class="gallery">
+    <!-- 將下列圖片路徑換成你自己的圖檔 -->
+    <img src="images/nail1.jpg" alt="作品1">
+    <img src="images/nail2.jpg" alt="作品2">
+    <img src="images/nail3.jpg" alt="作品3">
+    <img src="images/nail4.jpg" alt="作品4">
+    <img src="images/nail5.jpg" alt="作品5">
+    <img src="images/nail6.jpg" alt="作品6">
+    <img src="images/nail7.jpg" alt="作品7">
+    <img src="images/nail8.jpg" alt="作品8">
+    <img src="images/nail9.jpg" alt="作品9">
+    <img src="images/nail10.jpg" alt="作品10">
+    <img src="images/nail11.jpg" alt="作品11">
+    <img src="images/nail12.jpg" alt="作品12">
+    <img src="images/nail13.jpg" alt="作品13">
+    <img src="images/nail14.jpg" alt="作品14">
+    <img src="images/nail15.jpg" alt="作品15">
+    <img src="images/nail16.jpg" alt="作品16">
+    <img src="images/nail17.jpg" alt="作品17">
+    <img src="images/nail18.jpg" alt="作品18">
+    <img src="images/nail19.jpg" alt="作品19">
+    <img src="images/nail20.jpg" alt="作品20">
   </div>
+</section>
 
-  <section id="contact">
-    <h2>聯絡 / 預約</h2>
-    <form action="https://formspree.io/f/mayvkvow" method="POST">
-      <input type="text" name="name" placeholder="姓名" required>
-      <input type="email" name="_replyto" placeholder="電子郵件" required>
-      <textarea name="message" placeholder="想預約哪天？告訴我們吧！" rows="4" required></textarea>
-      <button type="submit">送出</button>
-    </form>
-  </section>
-
-  <section id="products">
-    <h2>推薦商品</h2>
-    <div class="products">
-      <div class="product-item">
-        <h3>指甲油</h3>
-        <p>高品質持久配方，顏色飽和。</p>
-      </div>
-      <div class="product-item">
-        <h3>護甲油</h3>
-        <p>滋養護理，防止斷裂。</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="location">
-    <h2>店鋪位置</h2>
-    <iframe style="width:100%;height:300px;border:0;"
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3620.7!2d120.67!3d24.161!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1s0x0%3A0x0!2z44CSNDA0LCDlm7TlhYzlt6Xpm7TmoIPlurEv5a2m5YyX5rC0!5e0!3m2!1szh-TW!2stw!4v1687000000000!5m2!1szh-TW!2stw">
-    </iframe>
-  </section>
-</main>
+<section id="contact">
+  <h2>聯絡我們</h2>
+  <div class="contact-links">
+    <a class="button" href="https://line.me/R/ti/p/@166kslla" target="_blank">LINE 預約</a>
+    <a class="button" href="tel:0922828611">立即來電</a>
+  </div>
+  <p>官方 LINE：@166kslla</p>
+  <p>IG：ycl_nail.studio</p>
+  <p>手機：0922828611</p>
+  <p>營業時間：10:00～20:00</p>
+</section>
 
 <footer>
-  官方LINE：@166kslla｜IG：ycl_nail.studio｜電話：0922‑828‑611｜營業時間：10:00〜20:00
+  <p>地址：404台中市北區精武路266-7號</p>
+  <p>© YCL Nail Studio | Designed by ChatGPT</p>
 </footer>
-
-<script>
-  // 作品集點擊放大
-  document.querySelectorAll('.gallery img').forEach(img=>{
-    img.addEventListener('click',()=>{
-      document.getElementById('modal-img').src=img.src;
-      document.getElementById('gallery-modal').style.display='flex';
-    });
-  });
-</script>
 
 </body>
 </html>
