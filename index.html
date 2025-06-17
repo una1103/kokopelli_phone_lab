@@ -1,339 +1,177 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>詠粸麗 美甲工作室 | YCL Nail Studio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>詠粸麗 美甲工作室｜YCL Nail Studio</title>
 <style>
-  /* 基本樣式 */
-  body {
-    font-family: 'Noto Sans TC', sans-serif;
-    background: #fff;
-    color: #5a4d3a;
-    margin: 0; padding: 0;
-  }
-  header {
-    background: linear-gradient(90deg, #fefefe 0%, #f6f1e7 100%);
-    border-bottom: 2px solid #d1cbb4;
-    padding: 20px;
-    text-align: center;
-  }
-  header h1 {
-    margin: 0;
-    color: #b38b3d;
-  }
-  nav {
-    margin-top: 10px;
-  }
-  nav button {
-    margin: 0 8px;
-    padding: 8px 14px;
-    border: none;
-    background-color: #b38b3d;
-    color: #fff;
-    cursor: pointer;
-    border-radius: 4px;
-  }
-  nav button:hover {
-    background-color: #d1cbb4;
-    color: #5a4d3a;
-  }
-  main {
-    max-width: 900px;
-    margin: 30px auto;
-    padding: 0 15px;
-  }
-  section {
-    margin-bottom: 50px;
-  }
-  h2 {
-    border-bottom: 2px solid #b38b3d;
-    padding-bottom: 6px;
-    margin-bottom: 20px;
-  }
+/* Reset & 基礎 */
+body, h1, h2, p, ul, li, a, input, textarea, button {
+  margin:0;padding:0;font-family:'Noto Sans TC',sans-serif;
+}
+body { background:#faf5f0;color:#524239; }
+a { text-decoration:none; }
 
-  /* 動態浮現 */
-  .fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 1s forwards;
-  }
-  @keyframes fadeInUp {
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
+/* Header / Hero */
+header {
+  background: url('images/hero-bg.jpg') center/cover no-repeat;
+  height: 60vh; min-height: 400px;
+  display:flex;flex-direction:column;justify-content:center;align-items:center;
+  position:relative;
+}
+header::after { content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(255,255,255,0.6); }
+header h1 {
+  position:relative;font-size:3rem;color:#bfa16a;margin-bottom:10px;
+}
+#hero-cta {
+  position:relative;margin-top:20px;
+}
+#hero-cta a {
+  background:#bfa16a;color:#fff;padding:12px 24px;border-radius:5px;margin:0 10px;
+  font-weight:600;transition:0.3s;
+}
+#hero-cta a:hover { background:#867245; }
 
-  /* 預約按鈕 */
-  .contact-buttons a {
-    display: inline-block;
-    margin-right: 15px;
-    padding: 12px 20px;
-    background: #b38b3d;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-  }
-  .contact-buttons a:hover {
-    background: #d1cbb4;
-    color: #5a4d3a;
-  }
+/* Main */
+main { max-width:900px;margin:40px auto;padding:0 20px; }
 
-  /* 作品集 */
-  .gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-  }
-  .gallery img {
-    width: 180px;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-  }
-  .gallery img:hover {
-    transform: scale(1.1);
-  }
+/* Services */
+#services h2 { color:#bfa16a;border-bottom:2px solid #e3d6c1;padding-bottom:8px;margin-bottom:20px; }
+#services ul { list-style:none; }
+#services li { margin:10px 0;font-size:18px; }
 
-  /* Modal 放大圖 */
-  .modal {
-    display: none; 
-    position: fixed; 
-    z-index: 999; 
-    padding-top: 60px; 
-    left: 0; top: 0; width: 100%; height: 100%; 
-    overflow: auto; background-color: rgba(0,0,0,0.8);
-  }
-  .modal-content {
-    margin: auto; display: block; max-width: 80%;
-    border-radius: 10px;
-  }
-  .modal-close {
-    position: absolute; top: 30px; right: 30px;
-    color: white; font-size: 40px; font-weight: bold;
-    cursor: pointer;
-  }
+/* Gallery */
+#gallery h2 { color:#bfa16a;border-bottom:2px solid #e3d6c1;padding-bottom:8px;margin-bottom:20px; }
+.gallery {
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:15px;
+}
+.gallery img {
+  width:100%;border-radius:8px;cursor:pointer;
+  transition:transform 0.3s;
+}
+.gallery img:hover { transform:scale(1.05); }
 
-  /* 語言切換 */
-  .lang-toggle {
-    position: fixed;
-    top: 15px; right: 15px;
-    background: #b38b3d;
-    border: none;
-    color: white;
-    padding: 8px 14px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  .lang-toggle:hover {
-    background: #d1cbb4;
-    color: #5a4d3a;
-  }
+/* Modal */
+.modal {
+  display:none;position:fixed;top:0;left:0;width:100%;height:100%;
+  background:rgba(0,0,0,0.8);justify-content:center;align-items:center;
+}
+.modal img { max-width:90%;max-height:90%;border-radius:8px; }
+.modal span {
+  position:absolute;top:20px;right:30px;font-size:40px;color:#fff;
+  cursor:pointer;
+}
 
-  /* 表單 */
-  form {
-    max-width: 400px;
-  }
-  form input, form textarea {
-    width: 100%; margin-bottom: 12px; padding: 8px;
-    border: 1px solid #b38b3d;
-    border-radius: 4px;
-    font-size: 1rem;
-  }
-  form button {
-    background: #b38b3d; color: white;
-    border: none;
-    padding: 10px 16px;
-    cursor: pointer;
-    border-radius: 4px;
-    font-weight: bold;
-  }
-  form button:hover {
-    background: #d1cbb4;
-    color: #5a4d3a;
-  }
+/* Contact & Form */
+#contact, #products, #location, footer { margin-bottom:50px; }
+form { max-width:400px;margin:20px 0; }
+form input, form textarea {
+  width:100%;padding:10px;margin-bottom:12px;border:1px solid #bfa16a;border-radius:4px;
+}
+form button {
+  background:#bfa16a;color:#fff;padding:10px 20px;border:none;border-radius:4px;
+  cursor:pointer;font-weight:600;
+}
+form button:hover { background:#867245; }
 
-  /* 商品介紹 */
-  .products {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-  }
-  .product-item {
-    flex: 1 1 250px;
-    border: 1px solid #b38b3d;
-    border-radius: 8px;
-    padding: 15px;
-  }
-  .product-item h3 {
-    margin-top: 0;
-  }
+/* Products Display */
+.products {
+  display:flex;flex-wrap:wrap;gap:20px;
+}
+.product-item {
+  flex:1 1 250px;border:1px solid #bfa16a;border-radius:8px;padding:15px;
+}
+.product-item h3 { margin-bottom:8px;color:#8a6b3f; }
 
-  /* Footer */
-  footer {
-    background: #f6f1e7;
-    padding: 20px;
-    text-align: center;
-    color: #5a4d3a;
-  }
-  footer a {
-    color: #b38b3d;
-    text-decoration: none;
-  }
+/* Footer */
+footer { background:#f0e1d3;padding:20px;text-align:center;font-size:14px;color:#8a6b3f; }
+
+/* Responsive */
+@media(max-width:600px){
+  header h1 { font-size:2.2rem; }
+  #hero-cta a { margin:8px 0;display:block; }
+}
 </style>
 </head>
 <body>
 
-<button class="lang-toggle" id="langBtn">English</button>
-
 <header>
-  <h1 data-lang-zh="詠粸麗 美甲工作室" data-lang-en="YCL Nail Studio">詠粸麗 美甲工作室</h1>
-  <p data-lang-zh="地址：404台中市北區精武路266-7號" data-lang-en="Address: No.266-7, Jingwu Rd., North Dist., Taichung City 404">地址：404台中市北區精武路266-7號</p>
-  <nav class="contact-buttons">
-    <a href="https://line.me/R/ti/p/@166kslla" target="_blank" rel="noopener" data-lang-zh="官方LINE" data-lang-en="LINE">官方LINE</a>
-    <a href="https://www.instagram.com/ycl_nail.studio/" target="_blank" rel="noopener" data-lang-zh="官方IG" data-lang-en="Instagram">官方IG</a>
-    <a href="tel:0922828611" data-lang-zh="撥打電話" data-lang-en="Call Us">撥打電話</a>
-  </nav>
+  <h1>詠粸麗 美甲工作室</h1>
+  <div id="hero-cta">
+    <a href="https://line.me/R/ti/p/%40166kslla" target="_blank">LINE 預約</a>
+    <a href="tel:0922828611">立即通話</a>
+  </div>
 </header>
 
 <main>
   <section id="services">
-    <h2 data-lang-zh="服務介紹" data-lang-en="Services">服務介紹</h2>
-    <ul data-lang-zh>
+    <h2>服務介紹</h2>
+    <ul>
       <li>基礎指甲護理 - NT$800</li>
       <li>法式美甲 - NT$1500</li>
-      <li>3D立體設計 - NT$2500</li>
+      <li>3D 立體設計 - NT$2500</li>
       <li>光療凝膠 - NT$2000</li>
-    </ul>
-    <ul data-lang-en style="display:none;">
-      <li>Basic Nail Care - NT$800</li>
-      <li>French Nail - NT$1500</li>
-      <li>3D Design - NT$2500</li>
-      <li>Gel Polish - NT$2000</li>
     </ul>
   </section>
 
   <section id="gallery">
-    <h2 data-lang-zh="作品集" data-lang-en="Gallery">作品集</h2>
+    <h2>作品集</h2>
     <div class="gallery">
-      <img src="images/nail1.jpg" alt="美甲作品1" />
-      <img src="images/nail2.jpg" alt="美甲作品2" />
-      <img src="images/nail3.jpg" alt="美甲作品3" />
-      <img src="images/nail4.jpg" alt="美甲作品4" />
+      <img src="images/nail1.jpg" alt="作品1">
+      <img src="images/nail2.jpg" alt="作品2">
+      <img src="images/nail3.jpg" alt="作品3">
+      <img src="images/nail4.jpg" alt="作品4">
     </div>
   </section>
 
-  <section id="contact-form">
-    <h2 data-lang-zh="聯絡我們" data-lang-en="Contact Us">聯絡我們</h2>
-    <form action="https://formspree.io/f/mayvkvow" method="POST">
-      <input type="text" name="name" placeholder="姓名" required data-lang-zh>
-      <input type="email" name="_replyto" placeholder="電子郵件" required data-lang-zh>
-      <textarea name="message" placeholder="留言內容" rows="5" required data-lang-zh></textarea>
-      <button type="submit" data-lang-zh>送出</button>
-    </form>
-    <form action="https://formspree.io/f/mayvkvow" method="POST" style="display:none;" id="contact-form-en">
-      <input type="text" name="name" placeholder="Name" required data-lang-en>
-      <input type="email" name="_replyto" placeholder="Email" required data-lang-en>
-      <textarea name="message" placeholder="Message" rows="5" required data-lang-en></textarea>
-      <button type="submit" data-lang-en>Send</button>
-    </form>
-  </section>
+  <div id="gallery-modal" class="modal">
+    <span onclick="this.parentElement.style.display='none'">&times;</span>
+    <img id="modal-img" src="" alt="放大作品">
+  </div>
 
-  <section id="map">
-    <h2 data-lang-zh="店鋪位置" data-lang-en="Location">店鋪位置</h2>
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3620.756516829501!2d120.66934431500479!3d24.161056384427197!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693d27ef30ee13%3A0x48c0c4b7d27c0c33!2z5q2j5biC5p2x5Y2A5Lmd5p2x5aSn5YyW5a6J5Y-W5bO2!5e0!3m2!1szh-TW!2stw!4v1686999999999!5m2!1szh-TW!2stw"
-      width="100%"
-      height="300"
-      style="border:0;"
-      allowfullscreen=""
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"
-    ></iframe>
+  <section id="contact">
+    <h2>聯絡 / 預約</h2>
+    <form action="https://formspree.io/f/mayvkvow" method="POST">
+      <input type="text" name="name" placeholder="姓名" required>
+      <input type="email" name="_replyto" placeholder="電子郵件" required>
+      <textarea name="message" placeholder="想預約哪天？告訴我們吧！" rows="4" required></textarea>
+      <button type="submit">送出</button>
+    </form>
   </section>
 
   <section id="products">
-    <h2 data-lang-zh="推薦商品" data-lang-en="Recommended Products">推薦商品</h2>
+    <h2>推薦商品</h2>
     <div class="products">
       <div class="product-item">
-        <h3 data-lang-zh>指甲油</h3>
-        <p data-lang-zh>高品質持久配方，顏色飽和度佳。</p>
-        <h3 data-lang-en style="display:none;">Nail Polish</h3>
-        <p data-lang-en style="display:none;">High-quality long-lasting formula with rich colors.</p>
+        <h3>指甲油</h3>
+        <p>高品質持久配方，顏色飽和。</p>
       </div>
       <div class="product-item">
-        <h3 data-lang-zh>護甲油</h3>
-        <p data-lang-zh>滋養指甲，防止斷裂。</p>
-        <h3 data-lang-en style="display:none;">Nail Strengthener</h3>
-        <p data-lang-en style="display:none;">Nourishes nails and prevents breakage.</p>
+        <h3>護甲油</h3>
+        <p>滋養護理，防止斷裂。</p>
       </div>
     </div>
+  </section>
+
+  <section id="location">
+    <h2>店鋪位置</h2>
+    <iframe style="width:100%;height:300px;border:0;"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3620.7!2d120.67!3d24.161!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1s0x0%3A0x0!2z44CSNDA0LCDlm7TlhYzlt6Xpm7TmoIPlurEv5a2m5YyX5rC0!5e0!3m2!1szh-TW!2stw!4v1687000000000!5m2!1szh-TW!2stw">
+    </iframe>
   </section>
 </main>
 
 <footer>
-  <p data-lang-zh>官方LINE：@166kslla | IG：ycl_nail.studio | 電話：0922-828-611 | 營業時間：10:00～20:00</p>
-  <p data-lang-en>LINE: @166kslla | IG: ycl_nail.studio | Phone: 0922-828-611 | Hours: 10:00 AM - 8:00 PM</p>
+  官方LINE：@166kslla｜IG：ycl_nail.studio｜電話：0922‑828‑611｜營業時間：10:00〜20:00
 </footer>
 
-<!-- Modal 圖片放大 -->
-<div id="modal" class="modal">
-  <span class="modal-close" id="modal-close">&times;</span>
-  <img class="modal-content" id="modal-img" alt="放大圖片" />
-</div>
-
 <script>
-  // 簡易中英文切換
-  const langBtn = document.getElementById('langBtn');
-  let lang = 'zh';
-
-  langBtn.addEventListener('click', () => {
-    if (lang === 'zh') {
-      lang = 'en';
-      langBtn.textContent = '中文';
-    } else {
-      lang = 'zh';
-      langBtn.textContent = 'English';
-    }
-    toggleLanguage(lang);
-  });
-
-  function toggleLanguage(lang) {
-    document.querySelectorAll('[data-lang-zh]').forEach(el => {
-      el.style.display = lang === 'zh' ? '' : 'none';
-    });
-    document.querySelectorAll('[data-lang-en]').forEach(el => {
-      el.style.display = lang === 'en' ? '' : 'none';
-    });
-  }
-
-  // 預設顯示中文
-  toggleLanguage('zh');
-
   // 作品集點擊放大
-  const modal = document.getElementById('modal');
-  const modalImg = document.getElementById('modal-img');
-  const modalClose = document.getElementById('modal-close');
-
-  document.querySelectorAll('.gallery img').forEach(img => {
-    img.addEventListener('click', () => {
-      modal.style.display = 'block';
-      modalImg.src = img.src;
-      modalImg.alt = img.alt;
+  document.querySelectorAll('.gallery img').forEach(img=>{
+    img.addEventListener('click',()=>{
+      document.getElementById('modal-img').src=img.src;
+      document.getElementById('gallery-modal').style.display='flex';
     });
-  });
-
-  modalClose.addEventListener('click', () => {
-    modal.style.display = 'none';
-  });
-  modal.addEventListener('click', e => {
-    if (e.target === modal) {
-      modal.style.display = 'none';
-    }
   });
 </script>
 
