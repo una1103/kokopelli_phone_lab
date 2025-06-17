@@ -3,65 +3,126 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>詠粸麗 美甲工作室 - 預約連結</title>
+  <title>詠粸麗 美甲工作室 - YCL Nail Studio</title>
   <style>
     body {
-      background-color: #ffe6ee; /* 淺粉紅背景 */
+      background-color: #ffe6ee;
       font-family: "Noto Sans TC", "Microsoft JhengHei", sans-serif;
       margin: 0;
-      padding: 40px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
+      padding: 0;
     }
-
+    header {
+      text-align: center;
+      padding: 30px 0;
+      background-color: #fff0f5;
+    }
+    header img {
+      height: 80px;
+    }
     h1 {
       color: #d6336c;
-      font-size: 28px;
-      margin-bottom: 40px;
+      font-size: 26px;
       text-align: center;
+      margin-bottom: 10px;
     }
-
+    .section {
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+    .price-table {
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .price-table h2 {
+      text-align: center;
+      color: #d6336c;
+    }
+    .price-table ul {
+      list-style: none;
+      padding: 0;
+    }
+    .price-table li {
+      padding: 8px 0;
+      border-bottom: 1px solid #eee;
+    }
     .btn-container {
       display: flex;
-      gap: 20px;
       flex-wrap: wrap;
       justify-content: center;
+      gap: 15px;
+      margin: 40px 0;
     }
-
     a.button {
       background-color: #ffffff;
       color: #d6336c;
-      padding: 15px 30px;
+      padding: 14px 26px;
       border-radius: 30px;
       text-decoration: none;
       font-weight: bold;
-      font-size: 16px;
+      font-size: 15px;
       box-shadow: 0 4px 8px rgba(214, 51, 108, 0.2);
-      transition: all 0.3s ease;
+      transition: 0.3s;
       min-width: 140px;
       text-align: center;
     }
-
     a.button:hover {
       background-color: #d6336c;
       color: #fff;
-      box-shadow: 0 6px 12px rgba(214, 51, 108, 0.4);
     }
-
+    iframe {
+      border: 0;
+      width: 100%;
+      height: 300px;
+      margin-top: 20px;
+      border-radius: 12px;
+    }
     footer {
-      margin-top: 60px;
       text-align: center;
-      color: #777;
       font-size: 14px;
+      padding: 20px;
+      color: #777;
     }
   </style>
 </head>
 <body>
 
+  <header>
+    <img src="images/logo.png" alt="詠粸麗 美甲工作室 Logo" />
+  </header>
+
   <h1>詠粸麗 美甲工作室</h1>
+
+  <div class="section price-table">
+    <h2>價目表</h2>
+    <ul>
+      <li><strong>手部</strong></li>
+      <li>純基礎保養：500</li>
+      <li>深層保養：1299</li>
+      <li>一般甲油（含基礎保養）：800</li>
+      <li>單色凝膠（含基礎保養）：1000</li>
+      <li>設計款：1250 起</li>
+      <br>
+      <li><strong>足部</strong></li>
+      <li>純基礎保養：800</li>
+      <li>一般甲油（含基礎保養）：1000</li>
+      <li>單色凝膠（含基礎保養、可跳一色）：1200</li>
+      <li>設計凝膠：1400 起</li>
+      <br>
+      <li><strong>設計</strong></li>
+      <li>延甲（單指）：100</li>
+      <li>單指彩繪：30 起</li>
+      <li>飾品/貼紙單指：10 起</li>
+      <li>鑽單指：30 起</li>
+      <br>
+      <li><strong>卸甲</strong></li>
+      <li>本店卸甲：200（續作則免）</li>
+      <li>他店卸甲：300</li>
+      <li>水晶卸甲：600</li>
+    </ul>
+  </div>
 
   <div class="btn-container">
     <a class="button" href="https://line.me/R/ti/p/%40166kslla" target="_blank">LINE 預約</a>
@@ -70,8 +131,18 @@
     <a class="button" href="https://una1103.github.io/ycl-nail-test/" target="_blank">心理測驗</a>
   </div>
 
+  <div class="section">
+    <h2>店鋪地點</h2>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3640.474102875907!2d120.69101107597183!3d24.15326917395401!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693d7f8822c02d%3A0x9b65c72a4e45b50b!2zNDA05Y-w5Lit5biC5YyX5Y2A5ZyL5aOr6LevMjY26Jmf!5e0!3m2!1szh-TW!2stw!4v1718580900415!5m2!1szh-TW!2stw"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+
   <footer>
-    地址：台中市北區精武路266-7號 ｜ 營業時間：10:00～20:00
+    地址：台中市北區精武路266-7號｜營業時間：10:00～20:00
   </footer>
 
 </body>
