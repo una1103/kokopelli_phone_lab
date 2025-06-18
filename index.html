@@ -1,35 +1,139 @@
-
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>手機工坊·科科佩利 | Kokopelli Phone Lab</title>
-  <link rel="stylesheet" href="css/style.css">
-  <script src="js/lang.js" defer></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', 'Noto Sans TC', sans-serif;
+      background-color: #0a0a0a;
+      color: #f0f0f0;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px 20px;
+    }
+
+    header img {
+      height: 80px;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin: 10px 0 5px;
+    }
+
+    h2 {
+      font-size: 1rem;
+      color: #999;
+      margin-bottom: 20px;
+    }
+
+    nav {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .lang-switch button {
+      margin: 0 5px;
+      padding: 6px 12px;
+      border: 1px solid #00ffc8;
+      background-color: transparent;
+      color: #00ffc8;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    section {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+      line-height: 1.8;
+    }
+
+    .highlight {
+      color: #00ffc8;
+    }
+
+    .contact {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .contact a {
+      display: inline-block;
+      margin: 10px;
+      padding: 10px 20px;
+      border: 1px solid #00ffc8;
+      color: #00ffc8;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+
+    .contact a:hover {
+      background-color: #00ffc8;
+      color: #0a0a0a;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      color: #888;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <img src="images/logo.png" alt="Kokopelli Phone Lab Logo" class="logo" />
+    <img src="logo.png" alt="Kokopelli Phone Lab Logo" />
+    <h1 id="title">手機工坊·科科佩利</h1>
+    <h2 id="subtitle">Kokopelli Phone Lab</h2>
+
     <div class="lang-switch">
       <button onclick="setLang('zh')">中文</button>
-      <button onclick="setLang('en')">EN</button>
+      <button onclick="setLang('en')">English</button>
     </div>
   </header>
-  <main>
-    <h1 data-zh="手機工坊·科科佩利" data-en="Kokopelli Phone Lab">手機工坊·科科佩利</h1>
-    <p data-zh="專業手機維修與配件販售，未來感科技風格服務。" 
-       data-en="Professional phone repair and accessories with futuristic style.">
-       專業手機維修與配件販售，未來感科技風格服務。
+
+  <section id="about">
+    <p id="aboutText">
+      我們是一家專業手機維修工作室，提供電池更換、螢幕維修、充電孔維修等快速服務，嚴選原廠零件，保障品質與保固。
+      也販售各式手機殼、傳輸線、行動電源，為你打造貼心的一站式體驗。
     </p>
-    <nav>
-      <a href="services.html" data-zh="服務項目" data-en="Services">服務項目</a>
-      <a href="pricing.html" data-zh="價目表" data-en="Pricing">價目表</a>
-      <a href="contact.html" data-zh="聯絡我們" data-en="Contact">聯絡我們</a>
-    </nav>
-  </main>
+  </section>
+
+  <section class="contact" id="contact">
+    <a href="https://line.me/R/ti/p/@122pntjd" target="_blank">LINE 預約</a>
+    <a href="https://www.instagram.com/kokopelli_phone_lab" target="_blank">Instagram</a>
+    <a href="https://www.tiktok.com/@user82462262831516" target="_blank">TikTok</a>
+    <a href="tel:0919663087">撥打電話</a>
+  </section>
+
   <footer>
-    <p>© 2025 Kokopelli Phone Lab</p>
+    📍 台中市太平區宜佳街43號｜Copyright © Kokopelli Phone Lab
   </footer>
+
+  <script>
+    function setLang(lang) {
+      if (lang === "zh") {
+        document.getElementById("title").innerText = "手機工坊·科科佩利";
+        document.getElementById("subtitle").innerText = "Kokopelli Phone Lab";
+        document.getElementById("aboutText").innerText = "我們是一家專業手機維修工作室，提供電池更換、螢幕維修、充電孔維修等快速服務，嚴選原廠零件，保障品質與保固。也販售各式手機殼、傳輸線、行動電源，為你打造貼心的一站式體驗。";
+        document.querySelectorAll(".contact a")[0].innerText = "LINE 預約";
+        document.querySelectorAll(".contact a")[3].innerText = "撥打電話";
+      } else {
+        document.getElementById("title").innerText = "Kokopelli Phone Lab";
+        document.getElementById("subtitle").innerText = "Professional Mobile Repair";
+        document.getElementById("aboutText").innerText = "We are a professional mobile phone repair studio offering battery replacements, screen repairs, charging port services, and more. We use high-quality parts and offer warranty for peace of mind. Accessories such as phone cases, power banks, and cables are also available.";
+        document.querySelectorAll(".contact a")[0].innerText = "Book via LINE";
+        document.querySelectorAll(".contact a")[3].innerText = "Call Us";
+      }
+    }
+  </script>
 </body>
 </html>
