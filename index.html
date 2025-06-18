@@ -90,7 +90,7 @@
 </head>
 <body>
   <header>
-    <img src="images/logo.png" alt="Kokopelli Phone Lab Logo" />
+    <img src="logo.png" alt="Kokopelli Phone Lab Logo" />
     <h1 id="title">手機工坊·科科佩利</h1>
     <h2 id="subtitle">Kokopelli Phone Lab</h2>
 
@@ -108,10 +108,11 @@
   </section>
 
   <section class="contact" id="contact">
-    <a href="https://line.me/R/ti/p/@122pntjd" target="_blank">LINE 預約</a>
+    <a href="https://line.me/R/ti/p/@122pntjd" target="_blank" id="lineBtn">LINE 預約</a>
     <a href="https://www.instagram.com/kokopelli_phone_lab" target="_blank">Instagram</a>
     <a href="https://www.tiktok.com/@user82462262831516" target="_blank">TikTok</a>
-    <a href="tel:0919663087">撥打電話</a>
+    <a href="https://www.xiaohongshu.com/user/profile/68520e94000000001b02199a?xsec_token=YBoDvoiws7e7EUhaijxbojbDaMIeRDLeZ1LyGs4eOWJgg=&xsec_source=app_share&xhsshare=CopyLink&appuid=68520e94000000001b02199a&apptime=1750215991&share_id=3e891ec6c30d4920bf5c77817a4d022f" target="_blank" id="xhsBtn">小紅書</a>
+    <a href="tel:0919663087" id="callBtn">撥打電話</a>
   </section>
 
   <footer>
@@ -124,14 +125,16 @@
         document.getElementById("title").innerText = "手機工坊·科科佩利";
         document.getElementById("subtitle").innerText = "Kokopelli Phone Lab";
         document.getElementById("aboutText").innerText = "我們是一家專業手機維修工作室，提供電池更換、螢幕維修、充電孔維修等快速服務，嚴選原廠零件，保障品質與保固。也販售各式手機殼、傳輸線、行動電源，為你打造貼心的一站式體驗。";
-        document.querySelectorAll(".contact a")[0].innerText = "LINE 預約";
-        document.querySelectorAll(".contact a")[3].innerText = "撥打電話";
+        document.getElementById("lineBtn").innerText = "LINE 預約";
+        document.getElementById("callBtn").innerText = "撥打電話";
+        document.getElementById("xhsBtn").innerText = "小紅書";
       } else {
         document.getElementById("title").innerText = "Kokopelli Phone Lab";
         document.getElementById("subtitle").innerText = "Professional Mobile Repair";
         document.getElementById("aboutText").innerText = "We are a professional mobile phone repair studio offering battery replacements, screen repairs, charging port services, and more. We use high-quality parts and offer warranty for peace of mind. Accessories such as phone cases, power banks, and cables are also available.";
-        document.querySelectorAll(".contact a")[0].innerText = "Book via LINE";
-        document.querySelectorAll(".contact a")[3].innerText = "Call Us";
+        document.getElementById("lineBtn").innerText = "Book via LINE";
+        document.getElementById("callBtn").innerText = "Call Us";
+        document.getElementById("xhsBtn").innerText = "Xiaohongshu";
       }
     }
   </script>
