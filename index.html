@@ -2,148 +2,138 @@
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>詠粸麗 美甲工作室 - YCL Nail Studio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>手機工坊·科科佩利 | Kokopelli Phone Lab</title>
   <style>
     body {
-      background-color: #ffe6ee;
-      font-family: "Noto Sans TC", "Microsoft JhengHei", sans-serif;
       margin: 0;
-      padding: 0;
+      font-family: 'Segoe UI', 'Noto Sans TC', sans-serif;
+      background-color: #0a0a0a;
+      color: #f0f0f0;
     }
+
     header {
       text-align: center;
-      padding: 30px 0;
-      background-color: #fff0f5;
+      padding: 40px 20px 20px;
     }
+
     header img {
       height: 80px;
     }
+
     h1 {
-      color: #d6336c;
-      font-size: 26px;
-      text-align: center;
-      margin-bottom: 10px;
+      font-size: 2rem;
+      margin: 10px 0 5px;
     }
-    .section {
-      padding: 20px;
+
+    h2 {
+      font-size: 1rem;
+      color: #999;
+      margin-bottom: 20px;
+    }
+
+    nav {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .lang-switch button {
+      margin: 0 5px;
+      padding: 6px 12px;
+      border: 1px solid #00ffc8;
+      background-color: transparent;
+      color: #00ffc8;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    section {
       max-width: 800px;
-      margin: auto;
+      margin: 40px auto;
+      padding: 0 20px;
+      line-height: 1.8;
     }
-    .price-table {
-      background: #fff;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+
+    .highlight {
+      color: #00ffc8;
     }
-    .price-table h2 {
+
+    .contact {
       text-align: center;
-      color: #d6336c;
+      margin-top: 40px;
     }
-    .price-table ul {
-      list-style: none;
-      padding: 0;
-    }
-    .price-table li {
-      padding: 8px 0;
-      border-bottom: 1px solid #eee;
-    }
-    .btn-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 15px;
-      margin: 40px 0;
-    }
-    a.button {
-      background-color: #ffffff;
-      color: #d6336c;
-      padding: 14px 26px;
+
+    .contact a {
+      display: inline-block;
+      margin: 10px;
+      padding: 10px 20px;
+      border: 1px solid #00ffc8;
+      color: #00ffc8;
       border-radius: 30px;
       text-decoration: none;
-      font-weight: bold;
-      font-size: 15px;
-      box-shadow: 0 4px 8px rgba(214, 51, 108, 0.2);
-      transition: 0.3s;
-      min-width: 140px;
-      text-align: center;
+      transition: background-color 0.3s;
     }
-    a.button:hover {
-      background-color: #d6336c;
-      color: #fff;
+
+    .contact a:hover {
+      background-color: #00ffc8;
+      color: #0a0a0a;
     }
-    iframe {
-      border: 0;
-      width: 100%;
-      height: 300px;
-      margin-top: 20px;
-      border-radius: 12px;
-    }
+
     footer {
       text-align: center;
-      font-size: 14px;
-      padding: 20px;
-      color: #777;
+      padding: 30px 20px;
+      color: #888;
+      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
-
   <header>
-    <img src="images/logo.png" alt="詠粸麗 美甲工作室 Logo" />
+    <img src="logo.png" alt="Kokopelli Phone Lab Logo" />
+    <h1 id="title">手機工坊·科科佩利</h1>
+    <h2 id="subtitle">Kokopelli Phone Lab</h2>
+
+    <div class="lang-switch">
+      <button onclick="setLang('zh')">中文</button>
+      <button onclick="setLang('en')">English</button>
+    </div>
   </header>
 
-  <h1>詠粸麗 美甲工作室</h1>
+  <section id="about">
+    <p id="aboutText">
+      我們是一家專業手機維修工作室，提供電池更換、螢幕維修、充電孔維修等快速服務，嚴選原廠零件，保障品質與保固。
+      也販售各式手機殼、傳輸線、行動電源，為你打造貼心的一站式體驗。
+    </p>
+  </section>
 
-  <div class="section price-table">
-    <h2>價目表</h2>
-    <ul>
-      <li><strong>手部</strong></li>
-      <li>純基礎保養：500</li>
-      <li>深層保養：1299</li>
-      <li>一般甲油（含基礎保養）：800</li>
-      <li>單色凝膠（含基礎保養）：1000</li>
-      <li>設計款：1250 起</li>
-      <br>
-      <li><strong>足部</strong></li>
-      <li>純基礎保養：800</li>
-      <li>一般甲油（含基礎保養）：1000</li>
-      <li>單色凝膠（含基礎保養、可跳一色）：1200</li>
-      <li>設計凝膠：1400 起</li>
-      <br>
-      <li><strong>設計</strong></li>
-      <li>延甲（單指）：100</li>
-      <li>單指彩繪：30 起</li>
-      <li>飾品/貼紙單指：10 起</li>
-      <li>鑽單指：30 起</li>
-      <br>
-      <li><strong>卸甲</strong></li>
-      <li>本店卸甲：200（續作則免）</li>
-      <li>他店卸甲：300</li>
-      <li>水晶卸甲：600</li>
-    </ul>
-  </div>
-
-  <div class="btn-container">
-    <a class="button" href="https://line.me/R/ti/p/%40166kslla" target="_blank">LINE 預約</a>
-    <a class="button" href="https://instagram.com/ycl_nail.studio" target="_blank">IG 私訊</a>
-    <a class="button" href="tel:0922828611">立即通話</a>
-    <a class="button" href="https://una1103.github.io/ycl-nail-test/" target="_blank">心理測驗</a>
-  </div>
-
-  <div class="section">
-    <h2>店鋪地點</h2>
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3640.474102875907!2d120.69101107597183!3d24.15326917395401!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693d7f8822c02d%3A0x9b65c72a4e45b50b!2zNDA05Y-w5Lit5biC5YyX5Y2A5ZyL5aOr6LevMjY26Jmf!5e0!3m2!1szh-TW!2stw!4v1718580900415!5m2!1szh-TW!2stw"
-      allowfullscreen=""
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
-  </div>
+  <section class="contact" id="contact">
+    <a href="https://line.me/R/ti/p/@122pntjd" target="_blank">LINE 預約</a>
+    <a href="https://www.instagram.com/kokopelli_phone_lab" target="_blank">Instagram</a>
+    <a href="https://www.tiktok.com/@user82462262831516" target="_blank">TikTok</a>
+    <a href="tel:0919663087">撥打電話</a>
+  </section>
 
   <footer>
-    地址：台中市北區精武路266-7號｜營業時間：10:00～20:00
+    📍 台中市太平區宜佳街43號｜Copyright © Kokopelli Phone Lab
   </footer>
 
+  <script>
+    function setLang(lang) {
+      if (lang === "zh") {
+        document.getElementById("title").innerText = "手機工坊·科科佩利";
+        document.getElementById("subtitle").innerText = "Kokopelli Phone Lab";
+        document.getElementById("aboutText").innerText = "我們是一家專業手機維修工作室，提供電池更換、螢幕維修、充電孔維修等快速服務，嚴選原廠零件，保障品質與保固。也販售各式手機殼、傳輸線、行動電源，為你打造貼心的一站式體驗。";
+        document.querySelectorAll(".contact a")[0].innerText = "LINE 預約";
+        document.querySelectorAll(".contact a")[3].innerText = "撥打電話";
+      } else {
+        document.getElementById("title").innerText = "Kokopelli Phone Lab";
+        document.getElementById("subtitle").innerText = "Professional Mobile Repair";
+        document.getElementById("aboutText").innerText = "We are a professional mobile phone repair studio offering battery replacements, screen repairs, charging port services, and more. We use high-quality parts and offer warranty for peace of mind. Accessories such as phone cases, power banks, and cables are also available.";
+        document.querySelectorAll(".contact a")[0].innerText = "Book via LINE";
+        document.querySelectorAll(".contact a")[3].innerText = "Call Us";
+      }
+    }
+  </script>
 </body>
 </html>
