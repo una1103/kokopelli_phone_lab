@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>服務項目 | 手機工坊·科科佩利</title>
+  <title>手機工坊·科科佩利 | 服務項目</title>
   <style>
     body {
       margin: 0;
@@ -11,94 +11,216 @@
       background-color: #0a0a0a;
       color: #f0f0f0;
     }
+
     header {
       text-align: center;
       padding: 40px 20px 20px;
     }
+
     header img {
       height: 80px;
     }
+
+    h1 {
+      font-size: 2rem;
+      margin: 10px 0 5px;
+      color: #00ffc8;
+    }
+
     nav {
       text-align: center;
       margin-top: 20px;
     }
+
     nav a {
-      color: #00ffc8;
       margin: 0 15px;
+      color: #00ffc8;
       text-decoration: none;
       font-weight: bold;
       font-size: 1rem;
-      transition: color 0.3s;
     }
+
     nav a:hover {
-      color: #0ff;
+      text-decoration: underline;
     }
-    section {
-      max-width: 800px;
+
+    .lang-switch button {
+      margin: 0 5px;
+      padding: 6px 12px;
+      border: 1px solid #00ffc8;
+      background-color: transparent;
+      color: #00ffc8;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    section#services {
+      max-width: 900px;
       margin: 40px auto;
       padding: 0 20px;
-      line-height: 1.8;
     }
-    ul.services-list {
-      list-style: none;
-      padding: 0;
-    }
-    ul.services-list li {
-      background-color: #111;
-      margin: 15px 0;
-      padding: 15px 20px;
-      border-radius: 12px;
-      box-shadow: 0 0 8px #00ffc8;
-    }
-    .back-home {
+
+    section#services h2 {
       text-align: center;
-      margin: 40px 0;
+      color: #00ffc8;
+      margin-bottom: 30px;
     }
-    .back-home a {
-      display: inline-block;
-      padding: 10px 24px;
-      background-color: #00ffc8;
-      color: #0a0a0a;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background-color 0.3s;
+
+    .service-cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
     }
-    .back-home a:hover {
-      background-color: #0ff;
+
+    .service-card {
+      flex: 1 1 350px;
+      background: #111;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 0 10px #00ffc8;
+      text-align: center;
+      transition: transform 0.2s;
+      cursor: default;
+    }
+
+    .service-card:hover {
+      transform: scale(1.05);
+    }
+
+    .service-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .service-card h3 {
+      margin-top: 15px;
+      color: #00ffc8;
+    }
+
+    .service-card p {
+      margin-top: 10px;
+      line-height: 1.5;
+      color: #ddd;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      color: #888;
+      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
+
   <header>
     <img src="logo.png" alt="Kokopelli Phone Lab Logo" />
-    <h1>手機工坊·科科佩利</h1>
-    <h2>Kokopelli Phone Lab</h2>
+    <h1 id="title">手機工坊·科科佩利 | 服務項目</h1>
 
     <nav>
-      <a href="index.html">首頁</a>
-      <a href="about.html">關於我們</a>
-      <a href="services.html">服務項目</a>
-      <a href="testimonials.html">顧客見證</a>
-      <a href="contact.html">聯絡我們</a>
+      <a href="index.html" id="nav-home">首頁</a>
+      <a href="about.html" id="nav-about">關於我們</a>
+      <a href="services.html" id="nav-services">服務項目</a>
+      <a href="testimonials.html" id="nav-testimonials">顧客見證</a>
+      <a href="contact.html" id="nav-contact">聯絡我們</a>
     </nav>
+
+    <div class="lang-switch">
+      <button onclick="setLang('zh')">中文</button>
+      <button onclick="setLang('en')">English</button>
+    </div>
   </header>
 
-  <section>
-    <h2>我們的服務</h2>
-    <ul class="services-list">
-      <li>螢幕破裂維修</li>
-      <li>電池更換</li>
-      <li>充電孔清潔及維修</li>
-      <li>手機相機鏡頭更換</li>
-      <li>手機軟體問題診斷與修復</li>
-      <li>手機殼、配件販售</li>
-    </ul>
+  <section id="services">
+    <h2 id="services-title">服務項目</h2>
+
+    <div class="service-cards">
+      <div class="service-card">
+        <img src="images/battery_replacement.jpg" alt="電池更換" />
+        <h3 id="service1-title">電池更換</h3>
+        <p id="service1-desc">快速更換原廠電池，延長手機使用壽命，保障安全與效能。</p>
+      </div>
+
+      <div class="service-card">
+        <img src="images/screen_repair.jpg" alt="螢幕維修" />
+        <h3 id="service2-title">螢幕維修</h3>
+        <p id="service2-desc">專業更換破裂或故障螢幕，恢復顯示與觸控功能。</p>
+      </div>
+
+      <div class="service-card">
+        <img src="images/charging_port_repair.jpg" alt="充電孔維修" />
+        <h3 id="service3-title">充電孔維修</h3>
+        <p id="service3-desc">修復充電孔接觸不良，確保充電順暢無阻。</p>
+      </div>
+
+      <div class="service-card">
+        <img src="images/accessories_sale.jpg" alt="配件販售" />
+        <h3 id="service4-title">配件販售</h3>
+        <p id="service4-desc">多款手機殼、傳輸線、行動電源，提供一站式購物體驗。</p>
+      </div>
+    </div>
   </section>
 
-  <section class="back-home">
-    <a href="index.html">返回首頁</a>
-  </section>
+  <footer>
+    📍 台中市太平區宜佳街43號｜Copyright © Kokopelli Phone Lab
+  </footer>
+
+  <script>
+    let lang = "zh";
+
+    function setLang(l) {
+      lang = l;
+      if (lang === "zh") {
+        document.getElementById("title").innerText = "手機工坊·科科佩利 | 服務項目";
+        document.getElementById("services-title").innerText = "服務項目";
+
+        document.getElementById("nav-home").innerText = "首頁";
+        document.getElementById("nav-about").innerText = "關於我們";
+        document.getElementById("nav-services").innerText = "服務項目";
+        document.getElementById("nav-testimonials").innerText = "顧客見證";
+        document.getElementById("nav-contact").innerText = "聯絡我們";
+
+        document.getElementById("service1-title").innerText = "電池更換";
+        document.getElementById("service1-desc").innerText = "快速更換原廠電池，延長手機使用壽命，保障安全與效能。";
+
+        document.getElementById("service2-title").innerText = "螢幕維修";
+        document.getElementById("service2-desc").innerText = "專業更換破裂或故障螢幕，恢復顯示與觸控功能。";
+
+        document.getElementById("service3-title").innerText = "充電孔維修";
+        document.getElementById("service3-desc").innerText = "修復充電孔接觸不良，確保充電順暢無阻。";
+
+        document.getElementById("service4-title").innerText = "配件販售";
+        document.getElementById("service4-desc").innerText = "多款手機殼、傳輸線、行動電源，提供一站式購物體驗。";
+
+      } else {
+        document.getElementById("title").innerText = "Kokopelli Phone Lab | Services";
+        document.getElementById("services-title").innerText = "Services";
+
+        document.getElementById("nav-home").innerText = "Home";
+        document.getElementById("nav-about").innerText = "About Us";
+        document.getElementById("nav-services").innerText = "Services";
+        document.getElementById("nav-testimonials").innerText = "Testimonials";
+        document.getElementById("nav-contact").innerText = "Contact";
+
+        document.getElementById("service1-title").innerText = "Battery Replacement";
+        document.getElementById("service1-desc").innerText = "Quick replacement of original batteries to extend phone life and ensure safety and performance.";
+
+        document.getElementById("service2-title").innerText = "Screen Repair";
+        document.getElementById("service2-desc").innerText = "Professional replacement of broken or malfunctioning screens to restore display and touch functionality.";
+
+        document.getElementById("service3-title").innerText = "Charging Port Repair";
+        document.getElementById("service3-desc").innerText = "Fix charging port connectivity issues to ensure smooth and reliable charging.";
+
+        document.getElementById("service4-title").innerText = "Accessories Sale";
+        document.getElementById("service4-desc").innerText = "A wide range of phone cases, cables, and power banks for a one-stop shopping experience.";
+      }
+    }
+
+    window.onload = () => setLang("zh");
+  </script>
 
 </body>
 </html>
