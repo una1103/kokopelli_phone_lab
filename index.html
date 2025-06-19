@@ -11,26 +11,54 @@
       background-color: #0a0a0a;
       color: #f0f0f0;
     }
+
     header {
       text-align: center;
-      padding: 40px 20px 20px;
+      padding: 30px 20px 10px;
     }
+
     header img {
       height: 80px;
     }
+
     h1 {
       font-size: 2rem;
       margin: 10px 0 5px;
     }
+
     h2 {
       font-size: 1rem;
       color: #999;
       margin-bottom: 20px;
     }
-    .lang-switch {
-      text-align: center;
-      margin-top: 10px;
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
     }
+
+    nav a {
+      color: #00ffc8;
+      text-decoration: none;
+      padding: 8px 16px;
+      border: 1px solid #00ffc8;
+      border-radius: 20px;
+      transition: background-color 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #00ffc8;
+      color: #000;
+    }
+
+    .lang-switch {
+      margin-top: 10px;
+      text-align: center;
+    }
+
     .lang-switch button {
       margin: 0 5px;
       padding: 6px 12px;
@@ -41,19 +69,53 @@
       cursor: pointer;
       font-weight: bold;
     }
+
     section {
-      max-width: 800px;
+      max-width: 960px;
       margin: 40px auto;
       padding: 0 20px;
-      line-height: 1.8;
     }
+
+    .hero {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .hero h3 {
+      font-size: 1.6rem;
+      color: #00ffc8;
+      margin-bottom: 10px;
+    }
+
     .highlight {
       color: #00ffc8;
     }
-    .contact {
-      text-align: center;
-      margin-top: 40px;
+
+    .services img {
+      width: 100%;
+      max-width: 250px;
+      border-radius: 10px;
+      margin-bottom: 10px;
     }
+
+    .service-item {
+      margin-bottom: 30px;
+    }
+
+    .testimonial {
+      background: #1a1a1a;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+      border-radius: 10px;
+    }
+
     .contact a {
       display: inline-block;
       margin: 10px;
@@ -64,10 +126,12 @@
       text-decoration: none;
       transition: background-color 0.3s;
     }
+
     .contact a:hover {
       background-color: #00ffc8;
       color: #0a0a0a;
     }
+
     footer {
       text-align: center;
       padding: 30px 20px;
@@ -78,60 +142,125 @@
 </head>
 <body>
   <header>
-    <img src="logo.png" alt="Kokopelli Phone Lab Logo" />
+    <img src="logo.png" alt="Kokopelli Logo" />
     <h1 id="title">手機工坊·科科佩利</h1>
     <h2 id="subtitle">Kokopelli Phone Lab</h2>
-
-    <div class="lang-switch">
-      <button onclick="setLang('zh')">中文</button>
-      <button onclick="setLang('en')">English</button>
-    </div>
   </header>
 
-  <section id="about">
-    <p id="aboutText">
-      我們是一家專業手機維修工作室，提供電池更換、螢幕維修、充電孔維修等快速服務，嚴選原廠零件，保障品質與保固。
-      也販售各式手機殼、傳輸線、行動電源，為你打造貼心的一站式體驗。
+  <nav>
+    <a href="index.html" id="nav-home">首頁</a>
+    <a href="about.html" id="nav-about">關於我們</a>
+    <a href="services.html" id="nav-services">服務項目</a>
+    <a href="testimonials.html" id="nav-testimonials">顧客見證</a>
+    <a href="contact.html" id="nav-contact">聯絡我們</a>
+  </nav>
+
+  <div class="lang-switch">
+    <button onclick="setLang('zh')">中文</button>
+    <button onclick="setLang('en')">English</button>
+  </div>
+
+  <section class="hero">
+    <h3 id="hero-text">你的手機救星 · 最快速、最安心的維修選擇！</h3>
+  </section>
+
+  <section id="vision">
+    <h2 id="vision-title">品牌理念</h2>
+    <p id="vision-text">
+      我們相信每一支手機都值得被細心對待。<br />
+      在這個科技高速發展的時代，<span class="highlight">科科佩利</span>不只是維修，更是您數位生活的守護者。
     </p>
   </section>
 
-  <section class="contact" id="contact">
-    <a href="https://line.me/R/ti/p/@122pntjd" target="_blank" id="lineLink">LINE 預約</a>
-    <a href="https://www.instagram.com/kokopelli_phone_lab" target="_blank" id="instaLink">Instagram</a>
-    <a href="https://www.tiktok.com/@user82462262831516" target="_blank" id="tiktokLink">TikTok</a>
-    <a href="tel:0919663087" id="phoneLink">撥打電話</a>
-    <a href="https://www.xiaohongshu.com/user/profile/68520e94000000001b02199a" target="_blank" id="xiaohongshuLink">小紅書</a>
+  <section id="services" class="services">
+    <h2 id="services-title">服務項目</h2>
+    <div class="service-item">
+      <img src="images/battery.jpg" alt="電池更換預留圖" />
+      <p id="service-battery">🔋 電池更換：快速、更安心</p>
+    </div>
+    <div class="service-item">
+      <img src="images/screen.jpg" alt="螢幕維修預留圖" />
+      <p id="service-screen">📱 螢幕維修：高品質螢幕零件，保障視覺體驗</p>
+    </div>
+    <div class="service-item">
+      <img src="images/port.jpg" alt="充電孔維修預留圖" />
+      <p id="service-port">⚡ 充電孔維修：接觸不良的最佳解方</p>
+    </div>
+    <div class="service-item">
+      <img src="images/water.jpg" alt="泡水救援預留圖" />
+      <p id="service-water">💧 泡水救援：爭分奪秒搶救你的資料</p>
+    </div>
+  </section>
+
+  <section id="testimonials">
+    <h2 id="testimonials-title">顧客見證</h2>
+    <div class="testimonial" id="testimonial-text">
+      「店家專業又有耐心，手機修得跟新的一樣，推薦給大家！」－ 小偉
+    </div>
+  </section>
+
+  <section id="map">
+    <h2>📍 店面位置</h2>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3644.254859162993!2d120.7298332752105!3d24.133800373390356!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693e6dc395cd61%3A0x86e7be448e5d1f79!2zNDEx5Y-w5Lit5biC5a6J5bmz5Y2A5ZyL5Y2X6KGXNDPomZ8!5e0!3m2!1szh-TW!2stw!4v1718786000000!5m2!1szh-TW!2stw"
+      allowfullscreen=""
+      loading="lazy"
+    ></iframe>
+  </section>
+
+  <section class="contact">
+    <h2>📞 聯絡我們</h2>
+    <a href="https://line.me/R/ti/p/@122pntjd" target="_blank">LINE</a>
+    <a href="https://www.instagram.com/kokopelli_phone_lab" target="_blank">Instagram</a>
+    <a href="https://www.tiktok.com/@user82462262831516" target="_blank">TikTok</a>
+    <a href="https://www.xiaohongshu.com/user/profile/68520e94000000001b02199a" target="_blank">小紅書</a>
+    <a href="tel:0919663087">撥打電話</a>
   </section>
 
   <footer>
-    📍 台中市太平區宜佳街43號｜Copyright © Kokopelli Phone Lab
+    台中市太平區宜佳街43號 ｜ Copyright © 2025 Kokopelli Phone Lab
   </footer>
 
   <script>
     function setLang(lang) {
       if (lang === "zh") {
+        document.getElementById("nav-home").innerText = "首頁";
+        document.getElementById("nav-about").innerText = "關於我們";
+        document.getElementById("nav-services").innerText = "服務項目";
+        document.getElementById("nav-testimonials").innerText = "顧客見證";
+        document.getElementById("nav-contact").innerText = "聯絡我們";
         document.getElementById("title").innerText = "手機工坊·科科佩利";
         document.getElementById("subtitle").innerText = "Kokopelli Phone Lab";
-        document.getElementById("aboutText").innerText = "我們是一家專業手機維修工作室，提供電池更換、螢幕維修、充電孔維修等快速服務，嚴選原廠零件，保障品質與保固。也販售各式手機殼、傳輸線、行動電源，為你打造貼心的一站式體驗。";
-        document.getElementById("lineLink").innerText = "LINE 預約";
-        document.getElementById("instaLink").innerText = "Instagram";
-        document.getElementById("tiktokLink").innerText = "TikTok";
-        document.getElementById("phoneLink").innerText = "撥打電話";
-        document.getElementById("xiaohongshuLink").innerText = "小紅書";
+        document.getElementById("hero-text").innerText = "你的手機救星 · 最快速、最安心的維修選擇！";
+        document.getElementById("vision-title").innerText = "品牌理念";
+        document.getElementById("vision-text").innerHTML = "我們相信每一支手機都值得被細心對待。<br>在這個科技高速發展的時代，<span class='highlight'>科科佩利</span>不只是維修，更是您數位生活的守護者。";
+        document.getElementById("services-title").innerText = "服務項目";
+        document.getElementById("service-battery").innerText = "🔋 電池更換：快速、更安心";
+        document.getElementById("service-screen").innerText = "📱 螢幕維修：高品質螢幕零件，保障視覺體驗";
+        document.getElementById("service-port").innerText = "⚡ 充電孔維修：接觸不良的最佳解方";
+        document.getElementById("service-water").innerText = "💧 泡水救援：爭分奪秒搶救你的資料";
+        document.getElementById("testimonials-title").innerText = "顧客見證";
+        document.getElementById("testimonial-text").innerText = "「店家專業又有耐心，手機修得跟新的一樣，推薦給大家！」－ 小偉";
       } else {
+        document.getElementById("nav-home").innerText = "Home";
+        document.getElementById("nav-about").innerText = "About";
+        document.getElementById("nav-services").innerText = "Services";
+        document.getElementById("nav-testimonials").innerText = "Testimonials";
+        document.getElementById("nav-contact").innerText = "Contact";
         document.getElementById("title").innerText = "Kokopelli Phone Lab";
         document.getElementById("subtitle").innerText = "Professional Mobile Repair";
-        document.getElementById("aboutText").innerText = "We are a professional mobile phone repair studio offering battery replacements, screen repairs, charging port services, and more. We use high-quality parts and offer warranty for peace of mind. Accessories such as phone cases, power banks, and cables are also available.";
-        document.getElementById("lineLink").innerText = "Book via LINE";
-        document.getElementById("instaLink").innerText = "Instagram";
-        document.getElementById("tiktokLink").innerText = "TikTok";
-        document.getElementById("phoneLink").innerText = "Call Us";
-        document.getElementById("xiaohongshuLink").innerText = "XiaoHongShu";
+        document.getElementById("hero-text").innerText = "Your smartphone’s best friend – fast, trusted, and professional.";
+        document.getElementById("vision-title").innerText = "Our Vision";
+        document.getElementById("vision-text").innerHTML = "We believe every phone deserves proper care.<br>In this fast-paced digital world, <span class='highlight'>Kokopelli</span> is more than repair — we’re your tech guardian.";
+        document.getElementById("services-title").innerText = "Services";
+        document.getElementById("service-battery").innerText = "🔋 Battery Replacement: Fast & safe power";
+        document.getElementById("service-screen").innerText = "📱 Screen Repair: Premium parts, clear display";
+        document.getElementById("service-port").innerText = "⚡ Charging Port Repair: Fixing connection issues";
+        document.getElementById("service-water").innerText = "💧 Water Damage Rescue: Save your data in time";
+        document.getElementById("testimonials-title").innerText = "Testimonials";
+        document.getElementById("testimonial-text").innerText = "“They were professional and kind — my phone feels brand new. Highly recommend!” – John";
       }
     }
-
-    // 預設語言
-    setLang('zh');
   </script>
 </body>
 </html>
