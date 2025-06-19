@@ -28,7 +28,7 @@
 
     h2 {
       font-size: 1.2rem;
-      color: #999;
+      color: #00ffc8;
       margin-bottom: 20px;
     }
 
@@ -49,7 +49,7 @@
     }
 
     section {
-      max-width: 800px;
+      max-width: 900px;
       margin: 40px auto;
       padding: 0 20px;
       line-height: 1.8;
@@ -60,9 +60,27 @@
       color: #00ffc8;
     }
 
-    .contact {
+    .services {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 30px;
+    }
+
+    .service-card {
+      background-color: #111;
+      border: 1px solid #00ffc8;
+      border-radius: 12px;
+      padding: 20px;
+      width: 250px;
       text-align: center;
-      margin-top: 40px;
+    }
+
+    .service-card img {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 10px;
     }
 
     .contact a {
@@ -118,7 +136,7 @@
 </head>
 <body>
   <header>
-    <img src="images/logo.png" alt="Kokopelli Phone Lab Logo" />
+    <img src="logo.png" alt="Kokopelli Phone Lab Logo" />
     <h1 id="title">手機工坊·科科佩利</h1>
     <h2 id="subtitle">Kokopelli Phone Lab</h2>
     <div class="lang-switch">
@@ -132,6 +150,28 @@
       我們是一家專業手機維修工作室，提供電池更換、螢幕維修、充電孔維修等快速服務，嚴選原廠零件，保障品質與保固。
       也販售各式手機殼、傳輸線、行動電源，為你打造貼心的一站式體驗。
     </p>
+  </section>
+
+  <section id="services">
+    <h2 id="servicesTitle">🔧 我們的服務</h2>
+    <div class="services">
+      <div class="service-card">
+        <img src="img/battery.png" alt="Battery Service">
+        <div id="batteryText">電池更換</div>
+      </div>
+      <div class="service-card">
+        <img src="img/screen.png" alt="Screen Repair">
+        <div id="screenText">螢幕維修</div>
+      </div>
+      <div class="service-card">
+        <img src="img/charging.png" alt="Charging Port">
+        <div id="chargingText">充電孔維修</div>
+      </div>
+      <div class="service-card">
+        <img src="img/accessories.png" alt="Accessories">
+        <div id="accessoryText">配件販售</div>
+      </div>
+    </div>
   </section>
 
   <section class="contact" id="contact">
@@ -164,29 +204,44 @@
         line: "LINE 預約",
         call: "撥打電話",
         newsTitle: "📢 最新消息",
-        newsText: "🔧 本週維修滿千送百 ｜📱 iPhone 螢幕維修 9 折｜🌟 客戶好評破 500 則！"
+        newsText: "🔧 本週維修滿千送百 ｜📱 iPhone 螢幕維修 9 折｜🌟 客戶好評破 500 則！",
+        servicesTitle: "🔧 我們的服務",
+        battery: "電池更換",
+        screen: "螢幕維修",
+        charging: "充電孔維修",
+        accessory: "配件販售"
       };
       const en = {
         title: "Kokopelli Phone Lab",
         subtitle: "Professional Mobile Repair",
-        about: "We are a professional mobile phone repair studio offering battery replacements, screen repairs, charging port services, and more. We use high-quality parts and offer warranty for peace of mind. Accessories such as phone cases, power banks, and cables are also available.",
+        about: "We offer battery replacements, screen repairs, charging port services, and more. We use high-quality parts with warranty. Also offering phone cases, power banks, and cables.",
         line: "Book via LINE",
         call: "Call Us",
         newsTitle: "📢 Latest News",
-        newsText: "🔧 This week: NT$1000 gets NT$100 back ｜📱 iPhone screen 10% off ｜🌟 Over 500 5-star reviews!"
+        newsText: "🔧 NT$1000 gets NT$100 back ｜📱 iPhone screen 10% off ｜🌟 Over 500 5-star reviews!",
+        servicesTitle: "🔧 Our Services",
+        battery: "Battery Replacement",
+        screen: "Screen Repair",
+        charging: "Charging Port Fix",
+        accessory: "Accessories & Gadgets"
       };
 
-      const data = lang === "zh" ? zh : en;
-      document.getElementById("title").innerText = data.title;
-      document.getElementById("subtitle").innerText = data.subtitle;
-      document.getElementById("aboutText").innerText = data.about;
-      document.getElementById("lineBtn").innerText = data.line;
-      document.getElementById("callBtn").innerText = data.call;
-      document.getElementById("newsTitle").innerText = data.newsTitle;
-      document.getElementById("newsContent").innerText = data.newsText;
+      const t = lang === "zh" ? zh : en;
+      document.getElementById("title").innerText = t.title;
+      document.getElementById("subtitle").innerText = t.subtitle;
+      document.getElementById("aboutText").innerText = t.about;
+      document.getElementById("lineBtn").innerText = t.line;
+      document.getElementById("callBtn").innerText = t.call;
+      document.getElementById("newsTitle").innerText = t.newsTitle;
+      document.getElementById("newsContent").innerText = t.newsText;
+      document.getElementById("servicesTitle").innerText = t.servicesTitle;
+      document.getElementById("batteryText").innerText = t.battery;
+      document.getElementById("screenText").innerText = t.screen;
+      document.getElementById("chargingText").innerText = t.charging;
+      document.getElementById("accessoryText").innerText = t.accessory;
     }
 
-    window.onload = () => setLang('zh'); // 預設中文
+    window.onload = () => setLang('zh');
   </script>
 </body>
 </html>
