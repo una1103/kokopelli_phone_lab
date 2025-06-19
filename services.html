@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>手機工坊·科科佩利 | 服務項目</title>
+  <title>服務項目 | Kokopelli Phone Lab</title>
   <style>
     body {
       margin: 0;
@@ -24,24 +24,11 @@
     h1 {
       font-size: 2rem;
       margin: 10px 0 5px;
-      color: #00ffc8;
     }
 
     nav {
       text-align: center;
       margin-top: 20px;
-    }
-
-    nav a {
-      margin: 0 15px;
-      color: #00ffc8;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1rem;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
     }
 
     .lang-switch button {
@@ -55,55 +42,45 @@
       font-weight: bold;
     }
 
-    section#services {
-      max-width: 900px;
+    section {
+      max-width: 800px;
       margin: 40px auto;
       padding: 0 20px;
     }
 
-    section#services h2 {
-      text-align: center;
-      color: #00ffc8;
-      margin-bottom: 30px;
+    .service-item {
+      margin-bottom: 40px;
     }
 
-    .service-cards {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
-      justify-content: center;
-    }
-
-    .service-card {
-      flex: 1 1 350px;
-      background: #111;
-      border-radius: 12px;
-      padding: 20px;
-      box-shadow: 0 0 10px #00ffc8;
-      text-align: center;
-      transition: transform 0.2s;
-      cursor: default;
-    }
-
-    .service-card:hover {
-      transform: scale(1.05);
-    }
-
-    .service-card img {
+    .service-item img {
       width: 100%;
-      height: auto;
-      border-radius: 8px;
+      max-width: 400px;
+      border-radius: 12px;
+      margin: 10px 0;
     }
 
-    .service-card h3 {
-      margin-top: 15px;
+    .service-item h2 {
       color: #00ffc8;
     }
 
-    .service-card p {
-      margin-top: 10px;
-      line-height: 1.5;
-      color: #ddd;
+    .back-home {
+      text-align: center;
+      margin: 60px 0 40px;
+    }
+
+    .back-home a {
+      display: inline-block;
+      padding: 12px 28px;
+      background-color: #00ffc8;
+      color: #0a0a0a;
+      font-weight: bold;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+
+    .back-home a:hover {
+      background-color: #00ddb0;
     }
 
     footer {
@@ -118,108 +95,71 @@
 
   <header>
     <img src="logo.png" alt="Kokopelli Phone Lab Logo" />
-    <h1 id="title">手機工坊·科科佩利 | 服務項目</h1>
-
-    <nav>
-      <a href="index.html" id="nav-home">首頁</a>
-      <a href="about.html" id="nav-about">關於我們</a>
-      <a href="services.html" id="nav-services">服務項目</a>
-      <a href="testimonials.html" id="nav-testimonials">顧客見證</a>
-      <a href="contact.html" id="nav-contact">聯絡我們</a>
-    </nav>
-
+    <h1 id="pageTitle">服務項目</h1>
     <div class="lang-switch">
       <button onclick="setLang('zh')">中文</button>
       <button onclick="setLang('en')">English</button>
     </div>
   </header>
 
-  <section id="services">
-    <h2 id="services-title">服務項目</h2>
+  <section>
+    <div class="service-item">
+      <h2 id="batteryTitle">🔋 電池更換</h2>
+      <img src="images/battery.jpg" alt="電池更換圖片" />
+      <p id="batteryDesc">快速更換原廠規格電池，恢復續航力與效能。</p>
+    </div>
 
-    <div class="service-cards">
-      <div class="service-card">
-        <img src="images/03.jpg" alt="電池更換" />
-        <h3 id="service1-title">電池更換</h3>
-        <p id="service1-desc">快速更換原廠電池，延長手機使用壽命，保障安全與效能。</p>
-      </div>
+    <div class="service-item">
+      <h2 id="screenTitle">📱 螢幕維修</h2>
+      <img src="images/screen.jpg" alt="螢幕維修圖片" />
+      <p id="screenDesc">破裂螢幕、觸控異常，皆能迅速修復，並保有顯示品質。</p>
+    </div>
 
-      <div class="service-card">
-        <img src="images/04.jpg" alt="螢幕維修" />
-        <h3 id="service2-title">螢幕維修</h3>
-        <p id="service2-desc">專業更換破裂或故障螢幕，恢復顯示與觸控功能。</p>
-      </div>
+    <div class="service-item">
+      <h2 id="portTitle">🔌 充電孔維修</h2>
+      <img src="images/charging.jpg" alt="充電孔維修圖片" />
+      <p id="portDesc">充電接觸不良？我們提供專業更換與維修服務。</p>
+    </div>
 
-      <div class="service-card">
-        <img src="images/01.jpg" alt="充電孔維修" />
-        <h3 id="service3-title">充電孔維修</h3>
-        <p id="service3-desc">修復充電孔接觸不良，確保充電順暢無阻。</p>
-      </div>
-
-      <div class="service-card">
-        <img src="images/02.jpg" alt="配件販售" />
-        <h3 id="service4-title">配件販售</h3>
-        <p id="service4-desc">多款手機殼、傳輸線、行動電源，提供一站式購物體驗。</p>
-      </div>
+    <div class="service-item">
+      <h2 id="otherTitle">📦 其他服務</h2>
+      <img src="images/accessories.jpg" alt="其他服務圖片" />
+      <p id="otherDesc">手機配件販售、資料轉移、軟體疑難排解，一站式搞定。</p>
     </div>
   </section>
 
+  <section class="back-home">
+    <a href="index.html">返回首頁</a>
+  </section>
+
   <footer>
-    📍 台中市太平區宜佳街43號｜Copyright © Kokopelli Phone Lab
+    📍 台中市太平區宜佳街43號｜© Kokopelli Phone Lab
   </footer>
 
   <script>
-    let lang = "zh";
-
-    function setLang(l) {
-      lang = l;
+    function setLang(lang) {
       if (lang === "zh") {
-        document.getElementById("title").innerText = "手機工坊·科科佩利 | 服務項目";
-        document.getElementById("services-title").innerText = "服務項目";
-
-        document.getElementById("nav-home").innerText = "首頁";
-        document.getElementById("nav-about").innerText = "關於我們";
-        document.getElementById("nav-services").innerText = "服務項目";
-        document.getElementById("nav-testimonials").innerText = "顧客見證";
-        document.getElementById("nav-contact").innerText = "聯絡我們";
-
-        document.getElementById("service1-title").innerText = "電池更換";
-        document.getElementById("service1-desc").innerText = "快速更換原廠電池，延長手機使用壽命，保障安全與效能。";
-
-        document.getElementById("service2-title").innerText = "螢幕維修";
-        document.getElementById("service2-desc").innerText = "專業更換破裂或故障螢幕，恢復顯示與觸控功能。";
-
-        document.getElementById("service3-title").innerText = "充電孔維修";
-        document.getElementById("service3-desc").innerText = "修復充電孔接觸不良，確保充電順暢無阻。";
-
-        document.getElementById("service4-title").innerText = "配件販售";
-        document.getElementById("service4-desc").innerText = "多款手機殼、傳輸線、行動電源，提供一站式購物體驗。";
-
+        document.getElementById("pageTitle").innerText = "服務項目";
+        document.getElementById("batteryTitle").innerText = "🔋 電池更換";
+        document.getElementById("batteryDesc").innerText = "快速更換原廠規格電池，恢復續航力與效能。";
+        document.getElementById("screenTitle").innerText = "📱 螢幕維修";
+        document.getElementById("screenDesc").innerText = "破裂螢幕、觸控異常，皆能迅速修復，並保有顯示品質。";
+        document.getElementById("portTitle").innerText = "🔌 充電孔維修";
+        document.getElementById("portDesc").innerText = "充電接觸不良？我們提供專業更換與維修服務。";
+        document.getElementById("otherTitle").innerText = "📦 其他服務";
+        document.getElementById("otherDesc").innerText = "手機配件販售、資料轉移、軟體疑難排解，一站式搞定。";
       } else {
-        document.getElementById("title").innerText = "Kokopelli Phone Lab | Services";
-        document.getElementById("services-title").innerText = "Services";
-
-        document.getElementById("nav-home").innerText = "Home";
-        document.getElementById("nav-about").innerText = "About Us";
-        document.getElementById("nav-services").innerText = "Services";
-        document.getElementById("nav-testimonials").innerText = "Testimonials";
-        document.getElementById("nav-contact").innerText = "Contact";
-
-        document.getElementById("service1-title").innerText = "Battery Replacement";
-        document.getElementById("service1-desc").innerText = "Quick replacement of original batteries to extend phone life and ensure safety and performance.";
-
-        document.getElementById("service2-title").innerText = "Screen Repair";
-        document.getElementById("service2-desc").innerText = "Professional replacement of broken or malfunctioning screens to restore display and touch functionality.";
-
-        document.getElementById("service3-title").innerText = "Charging Port Repair";
-        document.getElementById("service3-desc").innerText = "Fix charging port connectivity issues to ensure smooth and reliable charging.";
-
-        document.getElementById("service4-title").innerText = "Accessories Sale";
-        document.getElementById("service4-desc").innerText = "A wide range of phone cases, cables, and power banks for a one-stop shopping experience.";
+        document.getElementById("pageTitle").innerText = "Our Services";
+        document.getElementById("batteryTitle").innerText = "🔋 Battery Replacement";
+        document.getElementById("batteryDesc").innerText = "Replace your battery with a factory-grade one to restore full performance.";
+        document.getElementById("screenTitle").innerText = "📱 Screen Repair";
+        document.getElementById("screenDesc").innerText = "Fix cracked screens or touch issues quickly while preserving display quality.";
+        document.getElementById("portTitle").innerText = "🔌 Charging Port Repair";
+        document.getElementById("portDesc").innerText = "Loose charging port? We can clean, fix, or replace it for you.";
+        document.getElementById("otherTitle").innerText = "📦 More Services";
+        document.getElementById("otherDesc").innerText = "We offer accessories, data transfers, and troubleshooting—all in one place.";
       }
     }
-
-    window.onload = () => setLang("zh");
   </script>
 
 </body>
