@@ -2,7 +2,7 @@
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>手機工坊·科科佩利 | Kokopelli Phone Lab</title>
   <style>
     body {
@@ -18,20 +18,28 @@
     header img {
       height: 80px;
     }
-    nav {
-      text-align: center;
-      margin-top: 20px;
+    h1 {
+      font-size: 2rem;
+      margin: 10px 0 5px;
     }
-    nav a {
-      color: #00ffc8;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
+    h2 {
       font-size: 1rem;
-      transition: color 0.3s;
+      color: #999;
+      margin-bottom: 20px;
     }
-    nav a:hover {
-      color: #0ff;
+    .lang-switch {
+      text-align: center;
+      margin-top: 10px;
+    }
+    .lang-switch button {
+      margin: 0 5px;
+      padding: 6px 12px;
+      border: 1px solid #00ffc8;
+      background-color: transparent;
+      color: #00ffc8;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
     }
     section {
       max-width: 800px;
@@ -69,42 +77,61 @@
   </style>
 </head>
 <body>
-
   <header>
     <img src="logo.png" alt="Kokopelli Phone Lab Logo" />
-    <h1>手機工坊·科科佩利</h1>
-    <h2>Kokopelli Phone Lab</h2>
+    <h1 id="title">手機工坊·科科佩利</h1>
+    <h2 id="subtitle">Kokopelli Phone Lab</h2>
 
-    <nav>
-      <a href="index.html">首頁</a>
-      <a href="about.html">關於我們</a>
-      <a href="services.html">服務項目</a>
-      <a href="testimonials.html">顧客見證</a>
-      <a href="contact.html">聯絡我們</a>
-    </nav>
+    <div class="lang-switch">
+      <button onclick="setLang('zh')">中文</button>
+      <button onclick="setLang('en')">English</button>
+    </div>
   </header>
 
-  <section>
-    <h3>專業手機維修服務</h3>
-    <p>
-      我們提供快速且高品質的手機維修服務，包括電池更換、螢幕修復、充電孔清潔等，並使用嚴選原廠零件，讓您的手機恢復如新。
-    </p>
-    <p>
-      同時，我們販售各式手機配件，打造完整一站式體驗，讓您使用手機更安心便利。
+  <section id="about">
+    <p id="aboutText">
+      我們是一家專業手機維修工作室，提供電池更換、螢幕維修、充電孔維修等快速服務，嚴選原廠零件，保障品質與保固。
+      也販售各式手機殼、傳輸線、行動電源，為你打造貼心的一站式體驗。
     </p>
   </section>
 
-  <section class="contact">
-    <a href="https://line.me/R/ti/p/@122pntjd" target="_blank" rel="noopener noreferrer">LINE 預約</a>
-    <a href="https://www.instagram.com/kokopelli_phone_lab" target="_blank" rel="noopener noreferrer">Instagram</a>
-    <a href="https://www.tiktok.com/@user82462262831516" target="_blank" rel="noopener noreferrer">TikTok</a>
-    <a href="https://www.xiaohongshu.com/user/profile/68520e94000000001b02199a" target="_blank" rel="noopener noreferrer">小紅書</a>
-    <a href="tel:0919663087">撥打電話</a>
+  <section class="contact" id="contact">
+    <a href="https://line.me/R/ti/p/@122pntjd" target="_blank" id="lineLink">LINE 預約</a>
+    <a href="https://www.instagram.com/kokopelli_phone_lab" target="_blank" id="instaLink">Instagram</a>
+    <a href="https://www.tiktok.com/@user82462262831516" target="_blank" id="tiktokLink">TikTok</a>
+    <a href="tel:0919663087" id="phoneLink">撥打電話</a>
+    <a href="https://www.xiaohongshu.com/user/profile/68520e94000000001b02199a" target="_blank" id="xiaohongshuLink">小紅書</a>
   </section>
 
   <footer>
-    📍 台中市太平區宜佳街43號 ｜ Copyright © Kokopelli Phone Lab
+    📍 台中市太平區宜佳街43號｜Copyright © Kokopelli Phone Lab
   </footer>
 
+  <script>
+    function setLang(lang) {
+      if (lang === "zh") {
+        document.getElementById("title").innerText = "手機工坊·科科佩利";
+        document.getElementById("subtitle").innerText = "Kokopelli Phone Lab";
+        document.getElementById("aboutText").innerText = "我們是一家專業手機維修工作室，提供電池更換、螢幕維修、充電孔維修等快速服務，嚴選原廠零件，保障品質與保固。也販售各式手機殼、傳輸線、行動電源，為你打造貼心的一站式體驗。";
+        document.getElementById("lineLink").innerText = "LINE 預約";
+        document.getElementById("instaLink").innerText = "Instagram";
+        document.getElementById("tiktokLink").innerText = "TikTok";
+        document.getElementById("phoneLink").innerText = "撥打電話";
+        document.getElementById("xiaohongshuLink").innerText = "小紅書";
+      } else {
+        document.getElementById("title").innerText = "Kokopelli Phone Lab";
+        document.getElementById("subtitle").innerText = "Professional Mobile Repair";
+        document.getElementById("aboutText").innerText = "We are a professional mobile phone repair studio offering battery replacements, screen repairs, charging port services, and more. We use high-quality parts and offer warranty for peace of mind. Accessories such as phone cases, power banks, and cables are also available.";
+        document.getElementById("lineLink").innerText = "Book via LINE";
+        document.getElementById("instaLink").innerText = "Instagram";
+        document.getElementById("tiktokLink").innerText = "TikTok";
+        document.getElementById("phoneLink").innerText = "Call Us";
+        document.getElementById("xiaohongshuLink").innerText = "XiaoHongShu";
+      }
+    }
+
+    // 預設語言
+    setLang('zh');
+  </script>
 </body>
 </html>
