@@ -27,12 +27,12 @@
     }
 
     h2 {
-      font-size: 1rem;
+      font-size: 1.2rem;
       color: #999;
       margin-bottom: 20px;
     }
 
-    nav {
+    nav, .lang-switch {
       text-align: center;
       margin-top: 20px;
     }
@@ -53,6 +53,7 @@
       margin: 40px auto;
       padding: 0 20px;
       line-height: 1.8;
+      text-align: center;
     }
 
     .highlight {
@@ -80,6 +81,33 @@
       color: #0a0a0a;
     }
 
+    #news {
+      background-color: #111;
+      color: #00ffc8;
+      padding: 20px;
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    .ticker {
+      overflow: hidden;
+      white-space: nowrap;
+      box-sizing: border-box;
+    }
+
+    .ticker-text {
+      display: inline-block;
+      padding-left: 100%;
+      animation: scroll 12s linear infinite;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+
+    @keyframes scroll {
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(-100%); }
+    }
+
     footer {
       text-align: center;
       padding: 30px 20px;
@@ -90,10 +118,9 @@
 </head>
 <body>
   <header>
-    <img src="images/logo.png" alt="Kokopelli Phone Lab Logo" />
+    <img src="logo.png" alt="Kokopelli Phone Lab Logo" />
     <h1 id="title">手機工坊·科科佩利</h1>
     <h2 id="subtitle">Kokopelli Phone Lab</h2>
-
     <div class="lang-switch">
       <button onclick="setLang('zh')">中文</button>
       <button onclick="setLang('en')">English</button>
@@ -111,8 +138,17 @@
     <a href="https://line.me/R/ti/p/@122pntjd" target="_blank" id="lineBtn">LINE 預約</a>
     <a href="https://www.instagram.com/kokopelli_phone_lab" target="_blank">Instagram</a>
     <a href="https://www.tiktok.com/@user82462262831516" target="_blank">TikTok</a>
-    <a href="https://www.xiaohongshu.com/user/profile/68520e94000000001b02199a?xsec_token=YBoDvoiws7e7EUhaijxbojbDaMIeRDLeZ1LyGs4eOWJgg=&xsec_source=app_share&xhsshare=CopyLink&appuid=68520e94000000001b02199a&apptime=1750215991&share_id=3e891ec6c30d4920bf5c77817a4d022f" target="_blank" id="xhsBtn">小紅書</a>
+    <a href="https://www.xiaohongshu.com/user/profile/68520e94000000001b02199a" target="_blank">小紅書</a>
     <a href="tel:0919663087" id="callBtn">撥打電話</a>
+  </section>
+
+  <section id="news">
+    <h2 id="newsTitle">📢 最新消息</h2>
+    <div class="ticker">
+      <div class="ticker-text" id="newsContent">
+        🔧 本週維修滿千送百 ｜📱 iPhone 螢幕維修 9 折｜🌟 客戶好評破 500 則！
+      </div>
+    </div>
   </section>
 
   <footer>
@@ -121,22 +157,36 @@
 
   <script>
     function setLang(lang) {
-      if (lang === "zh") {
-        document.getElementById("title").innerText = "手機工坊·科科佩利";
-        document.getElementById("subtitle").innerText = "Kokopelli Phone Lab";
-        document.getElementById("aboutText").innerText = "我們是一家專業手機維修工作室，提供電池更換、螢幕維修、充電孔維修等快速服務，嚴選原廠零件，保障品質與保固。也販售各式手機殼、傳輸線、行動電源，為你打造貼心的一站式體驗。";
-        document.getElementById("lineBtn").innerText = "LINE 預約";
-        document.getElementById("callBtn").innerText = "撥打電話";
-        document.getElementById("xhsBtn").innerText = "小紅書";
-      } else {
-        document.getElementById("title").innerText = "Kokopelli Phone Lab";
-        document.getElementById("subtitle").innerText = "Professional Mobile Repair";
-        document.getElementById("aboutText").innerText = "We are a professional mobile phone repair studio offering battery replacements, screen repairs, charging port services, and more. We use high-quality parts and offer warranty for peace of mind. Accessories such as phone cases, power banks, and cables are also available.";
-        document.getElementById("lineBtn").innerText = "Book via LINE";
-        document.getElementById("callBtn").innerText = "Call Us";
-        document.getElementById("xhsBtn").innerText = "Xiaohongshu";
-      }
+      const zh = {
+        title: "手機工坊·科科佩利",
+        subtitle: "Kokopelli Phone Lab",
+        about: "我們是一家專業手機維修工作室，提供電池更換、螢幕維修、充電孔維修等快速服務，嚴選原廠零件，保障品質與保固。也販售各式手機殼、傳輸線、行動電源，為你打造貼心的一站式體驗。",
+        line: "LINE 預約",
+        call: "撥打電話",
+        newsTitle: "📢 最新消息",
+        newsText: "🔧 本週維修滿千送百 ｜📱 iPhone 螢幕維修 9 折｜🌟 客戶好評破 500 則！"
+      };
+      const en = {
+        title: "Kokopelli Phone Lab",
+        subtitle: "Professional Mobile Repair",
+        about: "We are a professional mobile phone repair studio offering battery replacements, screen repairs, charging port services, and more. We use high-quality parts and offer warranty for peace of mind. Accessories such as phone cases, power banks, and cables are also available.",
+        line: "Book via LINE",
+        call: "Call Us",
+        newsTitle: "📢 Latest News",
+        newsText: "🔧 This week: NT$1000 gets NT$100 back ｜📱 iPhone screen 10% off ｜🌟 Over 500 5-star reviews!"
+      };
+
+      const data = lang === "zh" ? zh : en;
+      document.getElementById("title").innerText = data.title;
+      document.getElementById("subtitle").innerText = data.subtitle;
+      document.getElementById("aboutText").innerText = data.about;
+      document.getElementById("lineBtn").innerText = data.line;
+      document.getElementById("callBtn").innerText = data.call;
+      document.getElementById("newsTitle").innerText = data.newsTitle;
+      document.getElementById("newsContent").innerText = data.newsText;
     }
+
+    window.onload = () => setLang('zh'); // 預設中文
   </script>
 </body>
 </html>
