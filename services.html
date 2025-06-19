@@ -11,134 +11,94 @@
       background-color: #0a0a0a;
       color: #f0f0f0;
     }
-
     header {
       text-align: center;
       padding: 40px 20px 20px;
     }
-
     header img {
       height: 80px;
     }
-
-    h1 {
-      font-size: 2rem;
-      margin: 10px 0 5px;
+    nav {
+      text-align: center;
+      margin-top: 20px;
     }
-
-    h2 {
-      font-size: 1rem;
-      color: #999;
-      margin-bottom: 20px;
-    }
-
-    .lang-switch {
-      margin: 10px;
-    }
-
-    .lang-switch button {
-      margin: 0 5px;
-      padding: 6px 12px;
-      border: 1px solid #00ffc8;
-      background-color: transparent;
+    nav a {
       color: #00ffc8;
-      border-radius: 20px;
-      cursor: pointer;
+      margin: 0 15px;
+      text-decoration: none;
       font-weight: bold;
+      font-size: 1rem;
+      transition: color 0.3s;
     }
-
+    nav a:hover {
+      color: #0ff;
+    }
     section {
       max-width: 800px;
       margin: 40px auto;
       padding: 0 20px;
+      line-height: 1.8;
     }
-
-    .service {
-      background-color: #141414;
+    ul.services-list {
+      list-style: none;
+      padding: 0;
+    }
+    ul.services-list li {
+      background-color: #111;
+      margin: 15px 0;
+      padding: 15px 20px;
       border-radius: 12px;
-      padding: 20px;
-      margin-bottom: 30px;
-      border-left: 5px solid #00ffc8;
+      box-shadow: 0 0 8px #00ffc8;
     }
-
-    .service h3 {
-      margin: 0 0 10px;
-      color: #00ffc8;
-    }
-
-    .service p {
-      margin: 0;
-      line-height: 1.6;
-    }
-
-    footer {
+    .back-home {
       text-align: center;
-      padding: 30px 20px;
-      color: #888;
-      font-size: 0.9rem;
+      margin: 40px 0;
+    }
+    .back-home a {
+      display: inline-block;
+      padding: 10px 24px;
+      background-color: #00ffc8;
+      color: #0a0a0a;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+    .back-home a:hover {
+      background-color: #0ff;
     }
   </style>
 </head>
 <body>
   <header>
     <img src="logo.png" alt="Kokopelli Phone Lab Logo" />
-    <h1 id="title">服務項目</h1>
-    <h2 id="subtitle">Our Services</h2>
-    <div class="lang-switch">
-      <button onclick="setLang('zh')">中文</button>
-      <button onclick="setLang('en')">English</button>
-    </div>
+    <h1>手機工坊·科科佩利</h1>
+    <h2>Kokopelli Phone Lab</h2>
+
+    <nav>
+      <a href="index.html">首頁</a>
+      <a href="about.html">關於我們</a>
+      <a href="services.html">服務項目</a>
+      <a href="testimonials.html">顧客見證</a>
+      <a href="contact.html">聯絡我們</a>
+    </nav>
   </header>
 
   <section>
-    <div class="service">
-      <h3 id="s1-title">電池更換</h3>
-      <p id="s1-desc">使用原廠電池，現場快速更換，延長手機續航力。</p>
-    </div>
-    <div class="service">
-      <h3 id="s2-title">螢幕維修</h3>
-      <p id="s2-desc">高品質觸控螢幕更換，還原觸感與視覺體驗。</p>
-    </div>
-    <div class="service">
-      <h3 id="s3-title">充電孔與喇叭維修</h3>
-      <p id="s3-desc">解決充電接觸不良與音訊問題，恢復手機功能。</p>
-    </div>
-    <div class="service">
-      <h3 id="s4-title">手機配件販售</h3>
-      <p id="s4-desc">提供手機殼、傳輸線、行動電源等實用配件。</p>
-    </div>
+    <h2>我們的服務</h2>
+    <ul class="services-list">
+      <li>螢幕破裂維修</li>
+      <li>電池更換</li>
+      <li>充電孔清潔及維修</li>
+      <li>手機相機鏡頭更換</li>
+      <li>手機軟體問題診斷與修復</li>
+      <li>手機殼、配件販售</li>
+    </ul>
   </section>
 
-  <footer>
-    📍 台中市太平區宜佳街43號｜Copyright © Kokopelli Phone Lab
-  </footer>
+  <section class="back-home">
+    <a href="index.html">返回首頁</a>
+  </section>
 
-  <script>
-    function setLang(lang) {
-      if (lang === 'zh') {
-        document.getElementById('title').innerText = '服務項目';
-        document.getElementById('subtitle').innerText = 'Our Services';
-        document.getElementById('s1-title').innerText = '電池更換';
-        document.getElementById('s1-desc').innerText = '使用原廠電池，現場快速更換，延長手機續航力。';
-        document.getElementById('s2-title').innerText = '螢幕維修';
-        document.getElementById('s2-desc').innerText = '高品質觸控螢幕更換，還原觸感與視覺體驗。';
-        document.getElementById('s3-title').innerText = '充電孔與喇叭維修';
-        document.getElementById('s3-desc').innerText = '解決充電接觸不良與音訊問題，恢復手機功能。';
-        document.getElementById('s4-title').innerText = '手機配件販售';
-        document.getElementById('s4-desc').innerText = '提供手機殼、傳輸線、行動電源等實用配件。';
-      } else {
-        document.getElementById('title').innerText = 'Services';
-        document.getElementById('subtitle').innerText = 'Our Services';
-        document.getElementById('s1-title').innerText = 'Battery Replacement';
-        document.getElementById('s1-desc').innerText = 'We use genuine batteries for fast replacements that restore battery life.';
-        document.getElementById('s2-title').innerText = 'Screen Repair';
-        document.getElementById('s2-desc').innerText = 'Premium touchscreen replacements for smooth display and touch experience.';
-        document.getElementById('s3-title').innerText = 'Charging Port & Speaker Repair';
-        document.getElementById('s3-desc').innerText = 'Fix charging issues and audio problems to restore full functionality.';
-        document.getElementById('s4-title').innerText = 'Accessories Sale';
-        document.getElementById('s4-desc').innerText = 'Cases, cables, power banks – everything you need in one place.';
-      }
-    }
-  </script>
 </body>
 </html>
