@@ -1,1 +1,144 @@
-<h1>服務項目頁面</h1>
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>服務項目 | 手機工坊·科科佩利</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', 'Noto Sans TC', sans-serif;
+      background-color: #0a0a0a;
+      color: #f0f0f0;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px 20px;
+    }
+
+    header img {
+      height: 80px;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin: 10px 0 5px;
+    }
+
+    h2 {
+      font-size: 1rem;
+      color: #999;
+      margin-bottom: 20px;
+    }
+
+    .lang-switch {
+      margin: 10px;
+    }
+
+    .lang-switch button {
+      margin: 0 5px;
+      padding: 6px 12px;
+      border: 1px solid #00ffc8;
+      background-color: transparent;
+      color: #00ffc8;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    section {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .service {
+      background-color: #141414;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 30px;
+      border-left: 5px solid #00ffc8;
+    }
+
+    .service h3 {
+      margin: 0 0 10px;
+      color: #00ffc8;
+    }
+
+    .service p {
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      color: #888;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="Kokopelli Phone Lab Logo" />
+    <h1 id="title">服務項目</h1>
+    <h2 id="subtitle">Our Services</h2>
+    <div class="lang-switch">
+      <button onclick="setLang('zh')">中文</button>
+      <button onclick="setLang('en')">English</button>
+    </div>
+  </header>
+
+  <section>
+    <div class="service">
+      <h3 id="s1-title">電池更換</h3>
+      <p id="s1-desc">使用原廠電池，現場快速更換，延長手機續航力。</p>
+    </div>
+    <div class="service">
+      <h3 id="s2-title">螢幕維修</h3>
+      <p id="s2-desc">高品質觸控螢幕更換，還原觸感與視覺體驗。</p>
+    </div>
+    <div class="service">
+      <h3 id="s3-title">充電孔與喇叭維修</h3>
+      <p id="s3-desc">解決充電接觸不良與音訊問題，恢復手機功能。</p>
+    </div>
+    <div class="service">
+      <h3 id="s4-title">手機配件販售</h3>
+      <p id="s4-desc">提供手機殼、傳輸線、行動電源等實用配件。</p>
+    </div>
+  </section>
+
+  <footer>
+    📍 台中市太平區宜佳街43號｜Copyright © Kokopelli Phone Lab
+  </footer>
+
+  <script>
+    function setLang(lang) {
+      if (lang === 'zh') {
+        document.getElementById('title').innerText = '服務項目';
+        document.getElementById('subtitle').innerText = 'Our Services';
+        document.getElementById('s1-title').innerText = '電池更換';
+        document.getElementById('s1-desc').innerText = '使用原廠電池，現場快速更換，延長手機續航力。';
+        document.getElementById('s2-title').innerText = '螢幕維修';
+        document.getElementById('s2-desc').innerText = '高品質觸控螢幕更換，還原觸感與視覺體驗。';
+        document.getElementById('s3-title').innerText = '充電孔與喇叭維修';
+        document.getElementById('s3-desc').innerText = '解決充電接觸不良與音訊問題，恢復手機功能。';
+        document.getElementById('s4-title').innerText = '手機配件販售';
+        document.getElementById('s4-desc').innerText = '提供手機殼、傳輸線、行動電源等實用配件。';
+      } else {
+        document.getElementById('title').innerText = 'Services';
+        document.getElementById('subtitle').innerText = 'Our Services';
+        document.getElementById('s1-title').innerText = 'Battery Replacement';
+        document.getElementById('s1-desc').innerText = 'We use genuine batteries for fast replacements that restore battery life.';
+        document.getElementById('s2-title').innerText = 'Screen Repair';
+        document.getElementById('s2-desc').innerText = 'Premium touchscreen replacements for smooth display and touch experience.';
+        document.getElementById('s3-title').innerText = 'Charging Port & Speaker Repair';
+        document.getElementById('s3-desc').innerText = 'Fix charging issues and audio problems to restore full functionality.';
+        document.getElementById('s4-title').innerText = 'Accessories Sale';
+        document.getElementById('s4-desc').innerText = 'Cases, cables, power banks – everything you need in one place.';
+      }
+    }
+  </script>
+</body>
+</html>
