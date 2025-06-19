@@ -1,125 +1,156 @@
 <!DOCTYPE html>
-<html lang='zh-TW'>
+<html lang="zh-Hant">
 <head>
-<meta charset='UTF-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1.0'>
-<title>YCL Nail Studio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>關於我們｜手機工坊·科科佩利</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', 'Noto Sans TC', sans-serif;
+      background-color: #0a0a0a;
+      color: #f0f0f0;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px 20px;
+    }
+
+    header img {
+      height: 80px;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin: 10px 0 5px;
+    }
+
+    h2 {
+      font-size: 1.2rem;
+      color: #00ffc8;
+      margin-top: 40px;
+      border-bottom: 1px solid #00ffc8;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    section {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 20px;
+      line-height: 1.8;
+    }
+
+    .lang-switch {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .lang-switch button {
+      margin: 0 5px;
+      padding: 6px 12px;
+      border: 1px solid #00ffc8;
+      background-color: transparent;
+      color: #00ffc8;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .lang-switch button:hover {
+      background-color: #00ffc8;
+      color: #0a0a0a;
+    }
+
+    .back-home {
+      text-align: center;
+      margin: 40px 0;
+    }
+
+    .back-home a {
+      color: #00ffc8;
+      text-decoration: none;
+      font-weight: bold;
+      border: 1px solid #00ffc8;
+      padding: 10px 20px;
+      border-radius: 25px;
+      transition: background-color 0.3s;
+    }
+
+    .back-home a:hover {
+      background-color: #00ffc8;
+      color: #0a0a0a;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      color: #888;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 <body>
 
-<style>
-  .ycl-wrap {
-    font-family: 'Noto Sans TC', sans-serif;
-    background: #fffdfa;
-    color: #4a4a4a;
-    padding: 20px;
-    max-width: 900px;
-    margin: auto;
-  }
-  .hero {
-    background: #fdf8f2;
-    border-radius: 12px;
-    padding: 40px 20px;
-    text-align: center;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-  }
-  .hero h1 {
-    color: #bfa16a;
-    font-size: 36px;
-    margin-bottom: 10px;
-  }
-  .hero p {
-    font-size: 18px;
-    margin-bottom: 20px;
-  }
-  .hero a {
-    display: inline-block;
-    margin: 6px;
-    padding: 12px 24px;
-    background: #d4b07c;
-    color: #fff;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  .section {
-    margin: 40px 0;
-    padding: 30px;
-    background: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-  }
-  .section h2 {
-    color: #bfa16a;
-    border-bottom: 2px solid #f0e4d0;
-    padding-bottom: 8px;
-    margin-bottom: 20px;
-    font-size: 24px;
-  }
-  .services ul {
-    list-style: none;
-    padding: 0;
-  }
-  .services li {
-    font-size: 18px;
-    margin: 12px 0;
-  }
-  .gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    justify-content: center;
-  }
-  .gallery img {
-    width: calc(33% - 8px);
-    border-radius: 8px;
-    object-fit: cover;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  }
-  .contact p {
-    font-size: 16px;
-    margin: 8px 0;
-  }
-  .contact a {
-    color: #bfa16a;
-    text-decoration: none;
-  }
-</style>
+  <header>
+    <img src="logo.png" alt="Kokopelli Phone Lab Logo" />
+    <h1 id="pageTitle">關於我們</h1>
+  </header>
 
-<div class="ycl-wrap">
-  <div class="hero">
-    <h1>詠粸麗 美甲工作室</h1>
-    <p>YCL Nail Studio — 高雅細緻的指尖藝術</p>
-    <a href="https://lin.ee/166kslla" target="_blank">LINE 預約</a>
-    <a href="https://instagram.com/ycl_nail.studio" target="_blank">Instagram</a>
-    <a href="tel:0922828611">電話聯繫</a>
+  <div class="lang-switch">
+    <button onclick="setLang('zh')">中文</button>
+    <button onclick="setLang('en')">English</button>
   </div>
-  <div class="section services">
-    <h2>服務介紹</h2>
-    <ul>
-      <li>單色凝膠 ｜ NT$899 起</li>
-      <li>造型凝膠（含延甲）｜ NT$1599 起</li>
-      <li>卸甲／保養 ｜ NT$499 起</li>
-    </ul>
+
+  <section>
+    <h2 id="brandStoryTitle">品牌故事</h2>
+    <p id="brandStory">
+      「手機工坊·科科佩利」誕生於對細節的堅持與對顧客的承諾。我們位於台中太平，以未來感為核心設計風格，打造安心、專業、快速的維修體驗。
+    </p>
+
+    <h2 id="visionTitle">我們的理念</h2>
+    <p id="visionText">
+      在數位時代裡，手機早已不只是工具，而是人們生活的延伸。我們致力於提供貼心透明的服務，從維修到保固、從配件到顧問，陪伴你每一次的數位旅程。
+    </p>
+
+    <h2 id="promiseTitle">專業承諾</h2>
+    <p id="promiseText">
+      嚴選原廠等級零件，所有維修均提供保固。我們相信，專業與信任，是手機工坊·科科佩利最核心的價值。
+    </p>
+  </section>
+
+  <div class="back-home">
+    <a href="index.html" id="homeLink">返回首頁</a>
   </div>
-  <div class="section gallery">
-    <h2>作品集</h2>
-    <img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=400&q=80" alt="Nail Sample 1">
-    <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=400&q=80" alt="Nail Sample 2">
-    <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=400&q=80" alt="Nail Sample 3">
-  </div>
-  <div class="section contact">
-    <h2>聯絡我們</h2>
-    <p>📍 地址：台中市北區精武路266-7號</p>
-    <p>📱 電話：<a href="tel:0922828611">0922-828-611</a></p>
-    <p>🕒 營業時間：每日 10:00～20:00</p>
-    <p>💬 LINE：<a href="https://lin.ee/166kslla" target="_blank">@166kslla</a></p>
-    <p>📸 Instagram：<a href="https://instagram.com/ycl_nail.studio" target="_blank">@ycl_nail.studio</a></p>
-    <div style="margin-top:20px;">
-      <iframe src="https://www.google.com/maps?q=台中市北區精武路266-7號&output=embed" width="100%" height="250" style="border:0;" allowfullscreen></iframe>
-    </div>
-  </div>
-</div>
+
+  <footer>
+    📍 台中市太平區宜佳街43號｜Copyright © Kokopelli Phone Lab
+  </footer>
+
+  <script>
+    function setLang(lang) {
+      if (lang === 'zh') {
+        document.getElementById("pageTitle").innerText = "關於我們";
+        document.getElementById("brandStoryTitle").innerText = "品牌故事";
+        document.getElementById("brandStory").innerText = "「手機工坊·科科佩利」誕生於對細節的堅持與對顧客的承諾。我們位於台中太平，以未來感為核心設計風格，打造安心、專業、快速的維修體驗。";
+        document.getElementById("visionTitle").innerText = "我們的理念";
+        document.getElementById("visionText").innerText = "在數位時代裡，手機早已不只是工具，而是人們生活的延伸。我們致力於提供貼心透明的服務，從維修到保固、從配件到顧問，陪伴你每一次的數位旅程。";
+        document.getElementById("promiseTitle").innerText = "專業承諾";
+        document.getElementById("promiseText").innerText = "嚴選原廠等級零件，所有維修均提供保固。我們相信，專業與信任，是手機工坊·科科佩利最核心的價值。";
+        document.getElementById("homeLink").innerText = "返回首頁";
+      } else {
+        document.getElementById("pageTitle").innerText = "About Us";
+        document.getElementById("brandStoryTitle").innerText = "Our Story";
+        document.getElementById("brandStory").innerText = "Kokopelli Phone Lab was founded on a commitment to detail and customer trust. Based in Taiping, Taichung, we deliver professional, fast, and futuristic mobile repair experiences.";
+        document.getElementById("visionTitle").innerText = "Our Vision";
+        document.getElementById("visionText").innerText = "In the digital age, phones are extensions of our lives. We aim to provide transparent, caring services—from repair to warranty, accessories to consultation—through every step of your digital journey.";
+        document.getElementById("promiseTitle").innerText = "Our Promise";
+        document.getElementById("promiseText").innerText = "We use original-grade parts and offer warranty for every repair. At Kokopelli Phone Lab, professionalism and trust are our core values.";
+        document.getElementById("homeLink").innerText = "Back to Home";
+      }
+    }
+  </script>
 
 </body>
 </html>
