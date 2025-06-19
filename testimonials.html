@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>顧客見證 | Kokopelli Phone Lab</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', 'Noto Sans TC', sans-serif;
+      background-color: #0a0a0a;
+      color: #f0f0f0;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px 10px;
+    }
+
+    header img {
+      height: 60px;
+    }
+
+    h1 {
+      font-size: 2rem;
+      color: #00ffc8;
+    }
+
+    .lang-switch {
+      margin-top: 10px;
+    }
+
+    .lang-switch button {
+      margin: 0 5px;
+      padding: 6px 12px;
+      border: 1px solid #00ffc8;
+      background-color: transparent;
+      color: #00ffc8;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    section {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .testimonial {
+      border: 1px solid #00ffc8;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 20px;
+      background-color: #111;
+    }
+
+    .testimonial h3 {
+      margin-top: 0;
+      color: #00ffc8;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      color: #888;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="Kokopelli Logo" />
+    <h1 id="pageTitle">顧客見證</h1>
+    <div class="lang-switch">
+      <button onclick="setLang('zh')">中文</button>
+      <button onclick="setLang('en')">English</button>
+    </div>
+  </header>
+
+  <section id="testimonials">
+    <div class="testimonial">
+      <h3 class="name">王小姐</h3>
+      <p class="text">維修速度超快，價格也合理，老闆很親切，還免費幫我清理充電孔！</p>
+    </div>
+    <div class="testimonial">
+      <h3 class="name">Mr. Chen</h3>
+      <p class="text">My phone screen was fixed in less than an hour. Super professional and honest service.</p>
+    </div>
+    <div class="testimonial">
+      <h3 class="name">林先生</h3>
+      <p class="text">換電池後手機續航力超明顯提升，推薦給大家！</p>
+    </div>
+  </section>
+
+  <footer>
+    📍 台中市太平區宜佳街43號｜Kokopelli Phone Lab
+  </footer>
+
+  <script>
+    function setLang(lang) {
+      document.getElementById("pageTitle").innerText =
+        lang === "zh" ? "顧客見證" : "Customer Testimonials";
+
+      const testimonials = document.querySelectorAll(".testimonial");
+      testimonials[0].querySelector(".name").innerText = lang === "zh" ? "王小姐" : "Ms. Wang";
+      testimonials[0].querySelector(".text").innerText = lang === "zh"
+        ? "維修速度超快，價格也合理，老闆很親切，還免費幫我清理充電孔！"
+        : "Super fast repair, fair pricing, and the owner even cleaned the charging port for free!";
+
+      testimonials[1].querySelector(".name").innerText = lang === "zh" ? "陳先生" : "Mr. Chen";
+      testimonials[1].querySelector(".text").innerText = lang === "zh"
+        ? "手機螢幕不到一小時就修好了，專業又誠實，值得信賴！"
+        : "My phone screen was fixed in less than an hour. Super professional and honest service.";
+
+      testimonials[2].querySelector(".name").innerText = lang === "zh" ? "林先生" : "Mr. Lin";
+      testimonials[2].querySelector(".text").innerText = lang === "zh"
+        ? "換電池後手機續航力超明顯提升，推薦給大家！"
+        : "Battery life improved a lot after replacement. Highly recommend!";
+    }
+  </script>
+</body>
+</html>
