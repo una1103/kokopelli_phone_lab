@@ -2,8 +2,8 @@
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>顧客見證 | Kokopelli Phone Lab</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>服務項目 | 手機工坊·科科佩利</title>
   <style>
     body {
       margin: 0;
@@ -11,113 +11,108 @@
       background-color: #0a0a0a;
       color: #f0f0f0;
     }
-
     header {
       text-align: center;
-      padding: 40px 20px 10px;
+      padding: 40px 20px 20px;
     }
-
     header img {
-      height: 60px;
+      height: 80px;
     }
-
-    h1 {
-      font-size: 2rem;
+    nav {
+      text-align: center;
+      margin-top: 20px;
+    }
+    nav a {
       color: #00ffc8;
-    }
-
-    .lang-switch {
-      margin-top: 10px;
-    }
-
-    .lang-switch button {
-      margin: 0 5px;
-      padding: 6px 12px;
-      border: 1px solid #00ffc8;
-      background-color: transparent;
-      color: #00ffc8;
-      border-radius: 20px;
-      cursor: pointer;
+      margin: 0 15px;
+      text-decoration: none;
       font-weight: bold;
+      font-size: 1rem;
+      transition: color 0.3s;
     }
-
+    nav a:hover {
+      color: #0ff;
+    }
     section {
       max-width: 800px;
       margin: 40px auto;
       padding: 0 20px;
+      line-height: 1.8;
     }
-
-    .testimonial {
-      border: 1px solid #00ffc8;
-      border-radius: 12px;
-      padding: 20px;
-      margin-bottom: 20px;
-      background-color: #111;
-    }
-
-    .testimonial h3 {
-      margin-top: 0;
+    h3 {
       color: #00ffc8;
+      margin-bottom: 10px;
     }
-
-    footer {
+    .service-item {
+      margin-bottom: 30px;
+    }
+    .back-home {
       text-align: center;
-      padding: 30px 20px;
-      color: #888;
-      font-size: 0.9rem;
+      margin: 40px 0;
+    }
+    .back-home a {
+      display: inline-block;
+      padding: 10px 24px;
+      background-color: #00ffc8;
+      color: #0a0a0a;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+    .back-home a:hover {
+      background-color: #0ff;
     }
   </style>
 </head>
 <body>
+
   <header>
-    <img src="logo.png" alt="Kokopelli Logo" />
-    <h1 id="pageTitle">顧客見證</h1>
-    <div class="lang-switch">
-      <button onclick="setLang('zh')">中文</button>
-      <button onclick="setLang('en')">English</button>
-    </div>
+    <img src="logo.png" alt="Kokopelli Phone Lab Logo" />
+    <h1>手機工坊·科科佩利</h1>
+    <h2>Kokopelli Phone Lab</h2>
+
+    <nav>
+      <a href="index.html">首頁</a>
+      <a href="about.html">關於我們</a>
+      <a href="services.html">服務項目</a>
+      <a href="testimonials.html">顧客見證</a>
+      <a href="contact.html">聯絡我們</a>
+    </nav>
   </header>
 
-  <section id="testimonials">
-    <div class="testimonial">
-      <h3 class="name">王小姐</h3>
-      <p class="text">維修速度超快，價格也合理，老闆很親切，還免費幫我清理充電孔！</p>
+  <section>
+    <h2>我們的服務項目</h2>
+
+    <div class="service-item">
+      <h3>電池更換</h3>
+      <p>快速更換手機電池，使用原廠或高品質電池，保障使用安全與續航力。</p>
     </div>
-    <div class="testimonial">
-      <h3 class="name">Mr. Chen</h3>
-      <p class="text">My phone screen was fixed in less than an hour. Super professional and honest service.</p>
+
+    <div class="service-item">
+      <h3>螢幕維修</h3>
+      <p>提供螢幕破裂、顯示異常維修服務，專業更換原廠液晶面板。</p>
     </div>
-    <div class="testimonial">
-      <h3 class="name">林先生</h3>
-      <p class="text">換電池後手機續航力超明顯提升，推薦給大家！</p>
+
+    <div class="service-item">
+      <h3>充電孔維修</h3>
+      <p>解決充電不良、接口鬆脫等問題，恢復手機正常充電功能。</p>
+    </div>
+
+    <div class="service-item">
+      <h3>軟體問題處理</h3>
+      <p>手機系統更新、異常故障診斷與修復，確保手機運作順暢。</p>
+    </div>
+
+    <div class="service-item">
+      <h3>手機配件販售</h3>
+      <p>多款手機殼、保護貼、充電線與行動電源，滿足各種需求。</p>
     </div>
   </section>
 
-  <footer>
-    📍 台中市太平區宜佳街43號｜Kokopelli Phone Lab
-  </footer>
+  <section class="back-home">
+    <a href="index.html">返回首頁</a>
+  </section>
 
-  <script>
-    function setLang(lang) {
-      document.getElementById("pageTitle").innerText =
-        lang === "zh" ? "顧客見證" : "Customer Testimonials";
-
-      const testimonials = document.querySelectorAll(".testimonial");
-      testimonials[0].querySelector(".name").innerText = lang === "zh" ? "王小姐" : "Ms. Wang";
-      testimonials[0].querySelector(".text").innerText = lang === "zh"
-        ? "維修速度超快，價格也合理，老闆很親切，還免費幫我清理充電孔！"
-        : "Super fast repair, fair pricing, and the owner even cleaned the charging port for free!";
-
-      testimonials[1].querySelector(".name").innerText = lang === "zh" ? "陳先生" : "Mr. Chen";
-      testimonials[1].querySelector(".text").innerText = lang === "zh"
-        ? "手機螢幕不到一小時就修好了，專業又誠實，值得信賴！"
-        : "My phone screen was fixed in less than an hour. Super professional and honest service.";
-
-      testimonials[2].querySelector(".name").innerText = lang === "zh" ? "林先生" : "Mr. Lin";
-      testimonials[2].querySelector(".text").innerText = lang === "zh"
-        ? "換電池後手機續航力超明顯提升，推薦給大家！"
-        : "Battery life improved a lot after replacement. Highly recommend!";
-    }
-  </script>
 </body>
 </html>
