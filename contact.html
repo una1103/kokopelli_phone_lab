@@ -1,1 +1,117 @@
-<h1>聯絡我們頁面</h1>
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>聯絡我們 | 手機工坊·科科佩利</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', 'Noto Sans TC', sans-serif;
+      background-color: #0a0a0a;
+      color: #f0f0f0;
+    }
+
+    header, footer {
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    h1 {
+      color: #00ffc8;
+      margin-bottom: 20px;
+    }
+
+    .lang-switch {
+      margin-bottom: 20px;
+    }
+
+    .lang-switch button {
+      margin: 0 5px;
+      padding: 6px 12px;
+      border: 1px solid #00ffc8;
+      background-color: transparent;
+      color: #00ffc8;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .contact-info {
+      max-width: 700px;
+      margin: auto;
+      padding: 0 20px;
+      line-height: 2;
+    }
+
+    .contact-info a {
+      color: #00ffc8;
+      text-decoration: none;
+    }
+
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 id="title">聯絡我們</h1>
+    <div class="lang-switch">
+      <button onclick="setLang('zh')">中文</button>
+      <button onclick="setLang('en')">English</button>
+    </div>
+  </header>
+
+  <section class="contact-info" id="contactInfo">
+    <p><strong>地址：</strong>411 台中市太平區宜佳街43號</p>
+    <p><strong>電話：</strong><a href="tel:0919663087">0919-663-087</a></p>
+    <p><strong>LINE：</strong><a href="https://line.me/R/ti/p/@122pntjd" target="_blank">@122pntjd</a></p>
+    <p><strong>Instagram：</strong><a href="https://www.instagram.com/kokopelli_phone_lab" target="_blank">@kokopelli_phone_lab</a></p>
+    <p><strong>TikTok：</strong><a href="https://www.tiktok.com/@user82462262831516" target="_blank">@user82462262831516</a></p>
+    <p><strong>小紅書：</strong><a href="https://www.xiaohongshu.com/user/profile/68520e94000000001b02199a" target="_blank">點我查看</a></p>
+  </section>
+
+  <iframe 
+    src="https://www.google.com/maps?q=411+台中市太平區宜佳街43號&output=embed"
+    allowfullscreen
+    loading="lazy">
+  </iframe>
+
+  <footer>
+    &copy; 2025 Kokopelli Phone Lab
+  </footer>
+
+  <script>
+    function setLang(lang) {
+      if (lang === "zh") {
+        document.getElementById("title").innerText = "聯絡我們";
+        document.getElementById("contactInfo").innerHTML = `
+          <p><strong>地址：</strong>411 台中市太平區宜佳街43號</p>
+          <p><strong>電話：</strong><a href="tel:0919663087">0919-663-087</a></p>
+          <p><strong>LINE：</strong><a href="https://line.me/R/ti/p/@122pntjd" target="_blank">@122pntjd</a></p>
+          <p><strong>Instagram：</strong><a href="https://www.instagram.com/kokopelli_phone_lab" target="_blank">@kokopelli_phone_lab</a></p>
+          <p><strong>TikTok：</strong><a href="https://www.tiktok.com/@user82462262831516" target="_blank">@user82462262831516</a></p>
+          <p><strong>小紅書：</strong><a href="https://www.xiaohongshu.com/user/profile/68520e94000000001b02199a" target="_blank">點我查看</a></p>
+        `;
+      } else {
+        document.getElementById("title").innerText = "Contact Us";
+        document.getElementById("contactInfo").innerHTML = `
+          <p><strong>Address:</strong> No. 43, Yijia Street, Taiping District, Taichung City 411</p>
+          <p><strong>Phone:</strong> <a href="tel:0919663087">0919-663-087</a></p>
+          <p><strong>LINE:</strong> <a href="https://line.me/R/ti/p/@122pntjd" target="_blank">@122pntjd</a></p>
+          <p><strong>Instagram:</strong> <a href="https://www.instagram.com/kokopelli_phone_lab" target="_blank">@kokopelli_phone_lab</a></p>
+          <p><strong>TikTok:</strong> <a href="https://www.tiktok.com/@user82462262831516" target="_blank">@user82462262831516</a></p>
+          <p><strong>RED (Xiaohongshu):</strong> <a href="https://www.xiaohongshu.com/user/profile/68520e94000000001b02199a" target="_blank">Click here</a></p>
+        `;
+      }
+    }
+
+    // 預設中文
+    setLang('zh');
+  </script>
+</body>
+</html>
