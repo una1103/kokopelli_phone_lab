@@ -5,33 +5,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>手機工坊·科科佩利 | Kokopelli Phone Lab</title>
   <style>
+    :root {
+      font-size: 16px; /* 基準字體大小（桌機） */
+    }
+
+    @media (max-width: 600px) {
+      :root {
+        font-size: 14px; /* 手機裝置字體稍微縮小 */
+      }
+    }
+
     body {
       margin: 0;
       font-family: 'Segoe UI', 'Noto Sans TC', sans-serif;
       background-color: #0a0a0a;
       color: #f0f0f0;
+      line-height: 1.6;
     }
 
     header {
       text-align: center;
-      padding: 30px 20px 10px;
+      padding: 2rem 1rem 1rem;
     }
 
     header img {
-      height: 80px;
+      height: 5rem;
     }
 
     nav {
-      margin: 20px 0;
+      margin: 1.2rem 0;
       text-align: center;
     }
 
     nav a {
       color: #00ffc8;
-      margin: 0 10px;
+      margin: 0 0.7rem;
       text-decoration: none;
       font-weight: bold;
-      font-size: 0.9rem;
+      font-size: 0.95rem;
     }
 
     nav a:hover {
@@ -40,18 +51,19 @@
 
     .lang-switch {
       text-align: center;
-      margin-top: 10px;
+      margin-top: 0.5rem;
     }
 
     .lang-switch button {
-      margin: 0 5px;
-      padding: 6px 12px;
+      margin: 0 0.4rem;
+      padding: 0.4rem 1rem;
       border: 1px solid #00ffc8;
       background-color: transparent;
       color: #00ffc8;
-      border-radius: 20px;
+      border-radius: 1rem;
       cursor: pointer;
       font-weight: bold;
+      font-size: 0.85rem;
     }
 
     .marquee-container {
@@ -59,7 +71,7 @@
       white-space: nowrap;
       background-color: #00ffc8;
       color: #0a0a0a;
-      padding: 10px 0;
+      padding: 0.6rem 0;
       font-weight: bold;
       font-size: 1rem;
     }
@@ -71,50 +83,64 @@
     }
 
     @keyframes scroll-left {
-      0% {
-        transform: translateX(0%);
-      }
-      100% {
-        transform: translateX(-100%);
-      }
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(-100%); }
     }
 
     section {
       max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
-      line-height: 1.8;
+      margin: 2.5rem auto;
+      padding: 0 1.2rem;
+    }
+
+    h1, h2 {
+      margin: 0.5rem 0;
+    }
+
+    #title {
+      font-size: 1.6rem;
+    }
+
+    #subtitle {
+      font-size: 1.2rem;
+      color: #aaa;
     }
 
     h2 {
       border-left: 4px solid #00ffc8;
-      padding-left: 10px;
-      margin-bottom: 20px;
+      padding-left: 0.6rem;
+      margin-bottom: 1rem;
       color: #00ffc8;
+      font-size: 1.3rem;
+    }
+
+    p {
+      font-size: 1rem;
     }
 
     iframe {
       width: 100%;
       height: 300px;
       border: 0;
-      border-radius: 12px;
-      margin-top: 10px;
+      border-radius: 0.75rem;
+      margin-top: 1rem;
     }
 
     .contact {
       text-align: center;
-      margin: 40px 0;
+      margin: 3rem 0;
     }
 
     .contact a {
       display: inline-block;
-      margin: 10px;
-      padding: 10px 20px;
+      margin: 0.5rem;
+      padding: 0.6rem 1.4rem;
       border: 1px solid #00ffc8;
       color: #00ffc8;
-      border-radius: 30px;
+      border-radius: 2rem;
       text-decoration: none;
       font-weight: bold;
+      font-size: 0.95rem;
     }
 
     .contact a:hover {
@@ -123,20 +149,27 @@
     }
 
     footer {
+      background-color: #0a0a0a;
       text-align: center;
-      padding: 30px 20px;
+      padding: 2rem 1rem;
       color: #888;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
+      line-height: 1.5;
+    }
+
+    .footer-inner {
+      max-width: 900px;
+      margin: 0 auto;
     }
 
     @media (max-width: 600px) {
       header img {
-        height: 60px;
+        height: 4rem;
       }
 
       nav a {
         display: block;
-        margin: 10px 0;
+        margin: 0.5rem 0;
       }
     }
   </style>
@@ -195,7 +228,10 @@
   </section>
 
   <footer>
-    © 2025 手機工坊·科科佩利 | Kokopelli Phone Lab — 411 台中市太平區宜佳街43號
+    <div class="footer-inner">
+      <p>© 2025 手機工坊·科科佩利 | Kokopelli Phone Lab</p>
+      <p>411 台中市太平區宜佳街43號</p>
+    </div>
   </footer>
 
   <script>
@@ -203,11 +239,13 @@
       if (lang === 'zh') {
         document.getElementById('title').innerText = '手機工坊·科科佩利';
         document.getElementById('subtitle').innerText = 'Kokopelli Phone Lab';
-        document.getElementById('philosophy-text').innerHTML = "我們相信每一支手機，都是你與世界連結的重要橋樑。<br>科科佩利手機工坊秉持「快速、誠信、專業」的精神，結合未來感的美學設計，打造不只是維修，更是一種體驗的場所。";
+        document.getElementById('philosophy-text').innerHTML =
+          "我們相信每一支手機，都是你與世界連結的重要橋樑。<br>科科佩利手機工坊秉持「快速、誠信、專業」的精神，結合未來感的美學設計，打造不只是維修，更是一種體驗的場所。";
       } else {
         document.getElementById('title').innerText = 'Kokopelli Phone Lab';
         document.getElementById('subtitle').innerText = 'Futuristic Mobile Repair Studio';
-        document.getElementById('philosophy-text').innerHTML = "We believe every phone is a bridge connecting you to the world.<br>At Kokopelli Phone Lab, we combine speed, trust, and professionalism with futuristic aesthetics to provide more than just repairs — we deliver an experience.";
+        document.getElementById('philosophy-text').innerHTML =
+          "We believe every phone is a bridge connecting you to the world.<br>At Kokopelli Phone Lab, we combine speed, trust, and professionalism with futuristic aesthetics to provide more than just repairs — we deliver an experience.";
       }
     }
   </script>
