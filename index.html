@@ -2,16 +2,8 @@
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>手機工坊·科科佩利 | Kokopelli Phone Lab</title>
-  <meta name="description" content="手機工坊·科科佩利 Kokopelli Phone Lab｜台中太平專業手機維修，快速更換電池、螢幕與充電孔，支援LINE預約與社群客服，未來感風格服務空間。">
-<meta name="keywords" content="手機維修, 台中手機維修, 換電池, 換螢幕, 太平手機店, Kokopelli Phone Lab, 科科佩利, 手機工坊, 手機維修推薦">
-<meta name="author" content="Kokopelli Phone Lab">
-<meta property="og:title" content="手機工坊·科科佩利 Kokopelli Phone Lab" />
-<meta property="og:description" content="台中太平手機維修工作室｜未來感風格、快速維修、支援LINE預約與TikTok分享。" />
-<meta property="og:image" content="https://una1103.github.io/kokopelli_phone_lab/logo.png" />
-<meta property="og:url" content="https://una1103.github.io/kokopelli_phone_lab/" />
-<meta name="twitter:card" content="summary_large_image">
   <style>
     body {
       margin: 0;
@@ -22,42 +14,33 @@
 
     header {
       text-align: center;
-      padding: 40px 20px 20px;
+      padding: 30px 20px 10px;
     }
 
     header img {
       height: 80px;
     }
 
-    h1 {
-      font-size: 2rem;
-      margin: 10px 0 5px;
-    }
-
-    h2 {
-      font-size: 1rem;
-      color: #999;
-      margin-bottom: 20px;
-    }
-
     nav {
+      margin: 20px 0;
       text-align: center;
-      margin-top: 20px;
     }
 
     nav a {
-      margin: 0 12px;
-      text-decoration: none;
       color: #00ffc8;
+      margin: 0 10px;
+      text-decoration: none;
       font-weight: bold;
+      font-size: 1rem;
     }
 
     nav a:hover {
-      text-decoration: underline;
+      color: #0ff;
     }
 
     .lang-switch {
-      margin-top: 15px;
+      text-align: center;
+      margin-top: 10px;
     }
 
     .lang-switch button {
@@ -68,34 +51,95 @@
       color: #00ffc8;
       border-radius: 20px;
       cursor: pointer;
-      font-size: 0.9rem;
+      font-weight: bold;
+    }
+
+    .marquee-container {
+      overflow: hidden;
+      white-space: nowrap;
+      background-color: #00ffc8;
+      color: #0a0a0a;
+      padding: 10px 0;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+
+    .marquee {
+      display: inline-block;
+      padding-left: 100%;
+      animation: scroll-left 20s linear infinite;
+    }
+
+    @keyframes scroll-left {
+      0% {
+        transform: translateX(0%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
     }
 
     section {
-      max-width: 800px;
+      max-width: 900px;
       margin: 40px auto;
       padding: 0 20px;
       line-height: 1.8;
     }
 
-    .highlight {
+    h2 {
+      border-left: 4px solid #00ffc8;
+      padding-left: 10px;
+      margin-bottom: 20px;
       color: #00ffc8;
+    }
+
+    .service-item {
+      margin-bottom: 30px;
+    }
+
+    .service-item img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 12px;
+      margin-top: 10px;
+    }
+
+    .testimonial {
+      background-color: #111;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 10px #00ffc8aa;
+    }
+
+    .testimonial .author {
+      font-weight: bold;
+      color: #00ffc8;
+      margin-top: 10px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: 0;
+      border-radius: 12px;
+      margin-top: 10px;
     }
 
     .contact {
       text-align: center;
-      margin-top: 40px;
+      margin: 40px 0;
     }
 
     .contact a {
       display: inline-block;
-      margin: 8px;
+      margin: 10px;
       padding: 10px 20px;
       border: 1px solid #00ffc8;
       color: #00ffc8;
       border-radius: 30px;
       text-decoration: none;
-      font-size: 0.95rem;
+      font-weight: bold;
     }
 
     .contact a:hover {
@@ -109,20 +153,31 @@
       color: #888;
       font-size: 0.9rem;
     }
+
+    @media (max-width: 600px) {
+      header img {
+        height: 60px;
+      }
+
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+    }
   </style>
 </head>
 <body>
-
   <header>
     <img src="logo.png" alt="Kokopelli Phone Lab Logo" />
     <h1 id="title">手機工坊·科科佩利</h1>
     <h2 id="subtitle">Kokopelli Phone Lab</h2>
 
     <nav>
-      <a href="about.html" id="navAbout">關於我們</a>
-      <a href="services.html" id="navServices">服務項目</a>
-      <a href="testimonials.html" id="navTestimonials">顧客見證</a>
-      <a href="contact.html" id="navContact">聯絡我們</a>
+      <a href="index.html">首頁</a>
+      <a href="about.html">關於我們</a>
+      <a href="services.html">服務項目</a>
+      <a href="testimonials.html">顧客見證</a>
+      <a href="contact.html">聯絡我們</a>
     </nav>
 
     <div class="lang-switch">
@@ -131,50 +186,88 @@
     </div>
   </header>
 
-  <section>
-    <p id="aboutText">
-      我們是一家專業手機維修工作室，提供電池更換、螢幕維修、充電孔維修等快速服務，嚴選原廠零件，保障品質與保固。
-      也販售各式手機殼、傳輸線、行動電源，為你打造貼心的一站式體驗。
+  <div class="marquee-container">
+    <div class="marquee">
+      📢 手機工坊·科科佩利即將於 8/1 盛大開幕！未來感科技風手機維修體驗，敬請期待！｜Kokopelli Phone Lab is opening on August 1st! Futuristic phone repair experience coming soon – stay tuned!
+    </div>
+  </div>
+
+  <section id="philosophy">
+    <h2>品牌理念 / Our Philosophy</h2>
+    <p id="philosophy-text">
+      我們相信每一支手機，都是你與世界連結的重要橋樑。<br>
+      科科佩利手機工坊秉持「快速、誠信、專業」的精神，結合未來感的美學設計，打造不只是維修，更是一種體驗的場所。
     </p>
   </section>
 
-  <section class="contact" id="contact">
+  <section id="services">
+    <h2>服務項目 / Services</h2>
+    <div class="service-item">
+      <h3>🔋 電池更換 / Battery Replacement</h3>
+      <img src="images/battery.jpg" alt="Battery Replacement">
+    </div>
+    <div class="service-item">
+      <h3>📱 螢幕維修 / Screen Repair</h3>
+      <img src="images/screen.jpg" alt="Screen Repair">
+    </div>
+    <div class="service-item">
+      <h3>🔌 充電孔維修 / Charging Port Repair</h3>
+      <img src="images/charging.jpg" alt="Charging Port">
+    </div>
+    <div class="service-item">
+      <h3>🎧 聲音異常維修 / Audio Issue Fix</h3>
+      <img src="images/speaker.jpg" alt="Speaker Repair">
+    </div>
+  </section>
+
+  <section id="map">
+    <h2>地點資訊 / Location</h2>
+    <p>📍 台中市太平區宜佳街43號</p>
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3643.0247306014984!2d120.7381552!3d24.1354219!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3469197cd73093b5%3A0x41dbb7d19a41fa6a!2zNDEx5Y-w5Lit5biC5rKz5Y2A5a6J6I-v6KGXNDPomZ8!5e0!3m2!1szh-TW!2stw!4v1718789018836!5m2!1szh-TW!2stw"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+    ></iframe>
+  </section>
+
+  <section id="testimonials">
+    <h2>顧客見證 / Testimonials</h2>
+    <div class="testimonial">
+      <p>換電池快速又專業，現場不到30分鐘搞定，還有保固，安心！</p>
+      <div class="author">— 小芸（北屯）</div>
+    </div>
+    <div class="testimonial">
+      <p>原本螢幕黑掉以為完了，結果老闆30分鐘救回來，資料完全沒丟！</p>
+      <div class="author">— Kevin（大里）</div>
+    </div>
+  </section>
+
+  <section class="contact">
+    <h2>聯絡我們 / Contact</h2>
     <a href="https://line.me/R/ti/p/@122pntjd" target="_blank">LINE</a>
     <a href="https://www.instagram.com/kokopelli_phone_lab" target="_blank">Instagram</a>
     <a href="https://www.tiktok.com/@user82462262831516" target="_blank">TikTok</a>
     <a href="https://www.xiaohongshu.com/user/profile/68520e94000000001b02199a" target="_blank">小紅書</a>
-    <a href="tel:0919663087">撥打電話</a>
+    <a href="tel:0919663087">📞 0919-663-087</a>
   </section>
 
   <footer>
-    📍 台中市太平區宜佳街43號｜© Kokopelli Phone Lab
+    © 2025 手機工坊·科科佩利 | Kokopelli Phone Lab — 411 台中市太平區宜佳街43號
   </footer>
 
   <script>
     function setLang(lang) {
-      if (lang === "zh") {
-        document.getElementById("title").innerText = "手機工坊·科科佩利";
-        document.getElementById("subtitle").innerText = "Kokopelli Phone Lab";
-        document.getElementById("navAbout").innerText = "關於我們";
-        document.getElementById("navServices").innerText = "服務項目";
-        document.getElementById("navTestimonials").innerText = "顧客見證";
-        document.getElementById("navContact").innerText = "聯絡我們";
-        document.getElementById("aboutText").innerText = "我們是一家專業手機維修工作室，提供電池更換、螢幕維修、充電孔維修等快速服務，嚴選原廠零件，保障品質與保固。也販售各式手機殼、傳輸線、行動電源，為你打造貼心的一站式體驗。";
-        document.querySelectorAll(".contact a")[0].innerText = "LINE";
-        document.querySelectorAll(".contact a")[4].innerText = "撥打電話";
+      if (lang === 'zh') {
+        document.getElementById('title').innerText = '手機工坊·科科佩利';
+        document.getElementById('subtitle').innerText = 'Kokopelli Phone Lab';
+        document.getElementById('philosophy-text').innerHTML = "我們相信每一支手機，都是你與世界連結的重要橋樑。<br>科科佩利手機工坊秉持「快速、誠信、專業」的精神，結合未來感的美學設計，打造不只是維修，更是一種體驗的場所。";
       } else {
-        document.getElementById("title").innerText = "Kokopelli Phone Lab";
-        document.getElementById("subtitle").innerText = "Your Trusted Phone Repair Lab";
-        document.getElementById("navAbout").innerText = "About Us";
-        document.getElementById("navServices").innerText = "Services";
-        document.getElementById("navTestimonials").innerText = "Testimonials";
-        document.getElementById("navContact").innerText = "Contact";
-        document.getElementById("aboutText").innerText = "We are a professional phone repair studio offering battery replacements, screen repairs, charging port fixes, and more. We use high-quality parts and offer a warranty. Accessories like phone cases, power banks, and cables are also available.";
-        document.querySelectorAll(".contact a")[0].innerText = "LINE";
-        document.querySelectorAll(".contact a")[4].innerText = "Call Us";
+        document.getElementById('title').innerText = 'Kokopelli Phone Lab';
+        document.getElementById('subtitle').innerText = 'Futuristic Mobile Repair Studio';
+        document.getElementById('philosophy-text').innerHTML = "We believe every phone is a bridge connecting you to the world.<br>At Kokopelli Phone Lab, we combine speed, trust, and professionalism with futuristic aesthetics to provide more than just repairs — we deliver an experience.";
       }
     }
   </script>
-
 </body>
 </html>
