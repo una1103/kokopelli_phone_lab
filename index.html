@@ -1,170 +1,188 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="zh-TW">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>手機工坊·科科佩利 | Kokopelli Phone Lab</title>
+  
+  <!-- 關鍵字 SEO -->
+  <meta name="keywords" content="手機維修, iPhone維修, 螢幕破裂, 台中手機維修, 太平手機維修, Kokopelli Phone Lab, 科科佩利, 電池更換, 資料救援, 手機泡水, 台中螢幕維修, 專業手機維修, 快速手機維修, 平價手機維修, iOS維修, Android維修, Phone Repair Taichung, Fast iPhone Repair, Apple Battery Replacement, 台中手機行推薦" />
+  <meta name="description" content="科科佩利手機工坊提供快速、誠信、未來感的手機維修體驗。服務項目包含電池更換、螢幕維修、水損搶修等，位於台中太平。">
+  <meta name="author" content="Kokopelli Phone Lab" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://una1103.github.io/kokopelli_phone_lab/" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:title" content="手機工坊·科科佩利 | 台中太平專業手機維修" />
+  <meta property="og:description" content="快速、專業、未來感的手機維修體驗，科科佩利手機工坊為您服務。" />
+  <meta property="og:image" content="https://una1103.github.io/kokopelli_phone_lab/images/og-image.jpg" />
+  <meta property="og:url" content="https://una1103.github.io/kokopelli_phone_lab/" />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="手機工坊·科科佩利 | 專業手機維修｜Kokopelli Phone Lab" />
+  <meta name="twitter:description" content="專注於誠信與速度，為太平區帶來全新手機維修體驗。" />
+  <meta name="twitter:image" content="https://una1103.github.io/kokopelli_phone_lab/images/og-image.jpg" />
+
+  <!-- Google Site Verification (驗證碼請替換) -->
+  <meta name="google-site-verification" content="你的驗證碼在這裡放入" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Segoe+UI&family=Noto+Sans+TC&display=swap" rel="stylesheet" />
+
+  <!-- CSS（照原本結構） -->
   <style>
+    :root {
+      font-size: 16px;
+    }
+    @media (max-width: 600px) {
+      :root {
+        font-size: 14px;
+      }
+    }
     body {
       margin: 0;
       font-family: 'Segoe UI', 'Noto Sans TC', sans-serif;
       background-color: #0a0a0a;
       color: #f0f0f0;
+      line-height: 1.6;
     }
-
     header {
       text-align: center;
-      padding: 30px 20px 10px;
+      padding: 2rem 1rem 1rem;
     }
-
     header img {
-      height: 80px;
+      height: 5rem;
     }
-
     nav {
-      margin: 20px 0;
+      margin: 1.2rem 0;
       text-align: center;
     }
-
     nav a {
       color: #00ffc8;
-      margin: 0 10px;
+      margin: 0 0.7rem;
       text-decoration: none;
       font-weight: bold;
-      font-size: 0.9rem; /* 字體縮小 */
+      font-size: 0.95rem;
     }
-
     nav a:hover {
       color: #0ff;
     }
-
     .lang-switch {
       text-align: center;
-      margin-top: 10px;
+      margin-top: 0.5rem;
     }
-
     .lang-switch button {
-      margin: 0 5px;
-      padding: 6px 12px;
+      margin: 0 0.4rem;
+      padding: 0.4rem 1rem;
       border: 1px solid #00ffc8;
       background-color: transparent;
       color: #00ffc8;
-      border-radius: 20px;
+      border-radius: 1rem;
       cursor: pointer;
       font-weight: bold;
       font-size: 0.85rem;
     }
-
     .marquee-container {
       overflow: hidden;
       white-space: nowrap;
       background-color: #00ffc8;
       color: #0a0a0a;
-      padding: 10px 0;
+      padding: 0.6rem 0;
       font-weight: bold;
       font-size: 1rem;
     }
-
     .marquee {
       display: inline-block;
       padding-left: 100%;
       animation: scroll-left 20s linear infinite;
     }
-
     @keyframes scroll-left {
-      0% {
-        transform: translateX(0%);
-      }
-      100% {
-        transform: translateX(-100%);
-      }
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(-100%); }
     }
-
     section {
       max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
-      line-height: 1.8;
+      margin: 2.5rem auto;
+      padding: 0 1.2rem;
     }
-
+    h1, h2 {
+      margin: 0.5rem 0;
+    }
+    #title {
+      font-size: 1.6rem;
+    }
+    #subtitle {
+      font-size: 1.2rem;
+      color: #aaa;
+    }
     h2 {
       border-left: 4px solid #00ffc8;
-      padding-left: 10px;
-      margin-bottom: 20px;
+      padding-left: 0.6rem;
+      margin-bottom: 1rem;
       color: #00ffc8;
       font-size: 1.3rem;
     }
-
-    .testimonial {
-      background-color: #111;
-      border-radius: 12px;
-      padding: 20px;
-      margin-bottom: 20px;
-      box-shadow: 0 0 10px #00ffc8aa;
+    p {
+      font-size: 1rem;
     }
-
-    .testimonial .author {
-      font-weight: bold;
-      color: #00ffc8;
-      margin-top: 10px;
-    }
-
     iframe {
       width: 100%;
       height: 300px;
       border: 0;
-      border-radius: 12px;
-      margin-top: 10px;
+      border-radius: 0.75rem;
+      margin-top: 1rem;
     }
-
     .contact {
       text-align: center;
-      margin: 40px 0;
+      margin: 3rem 0;
     }
-
     .contact a {
       display: inline-block;
-      margin: 10px;
-      padding: 10px 20px;
+      margin: 0.5rem;
+      padding: 0.6rem 1.4rem;
       border: 1px solid #00ffc8;
       color: #00ffc8;
-      border-radius: 30px;
+      border-radius: 2rem;
       text-decoration: none;
       font-weight: bold;
+      font-size: 0.95rem;
     }
-
     .contact a:hover {
       background-color: #00ffc8;
       color: #0a0a0a;
     }
-
     footer {
       background-color: #0a0a0a;
       text-align: center;
-      padding: 40px 20px;
+      padding: 2rem 1rem;
       color: #888;
-      font-size: 0.9rem;
-      line-height: 1.6;
+      font-size: 0.85rem;
+      line-height: 1.5;
     }
-
     .footer-inner {
       max-width: 900px;
       margin: 0 auto;
     }
-
     @media (max-width: 600px) {
       header img {
-        height: 60px;
+        height: 4rem;
       }
-
       nav a {
         display: block;
-        margin: 10px 0;
+        margin: 0.5rem 0;
       }
     }
   </style>
 </head>
 <body>
+
   <header>
     <img src="logo.png" alt="Kokopelli Phone Lab Logo" />
     <h1 id="title">手機工坊·科科佩利</h1>
@@ -186,7 +204,7 @@
 
   <div class="marquee-container">
     <div class="marquee">
-      📢 手機工坊·科科佩利即將於 8/1 盛大開幕！未來感科技風手機維修體驗，敬請期待！｜Kokopelli Phone Lab is opening on August 1st! Futuristic phone repair experience coming soon – stay tuned!
+      📢 手機工坊·科科佩利將於 8/1 盛大開幕！結合速度與美學的手機維修空間，歡迎光臨！
     </div>
   </div>
 
@@ -203,10 +221,10 @@
     <p>📍 台中市太平區宜佳街43號</p>
     <iframe 
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3643.0247306014984!2d120.7381552!3d24.1354219!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3469197cd73093b5%3A0x41dbb7d19a41fa6a!2zNDEx5Y-w5Lit5biC5rKz5Y2A5a6J6I-v6KGXNDPomZ8!5e0!3m2!1szh-TW!2stw!4v1718789018836!5m2!1szh-TW!2stw"
-      allowfullscreen=""
+      allowfullscreen
       loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"
-    ></iframe>
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
   </section>
 
   <section class="contact">
@@ -239,5 +257,6 @@
       }
     }
   </script>
+
 </body>
 </html>
