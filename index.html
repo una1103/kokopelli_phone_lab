@@ -3,176 +3,36 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>手機工坊·科科佩利 | Kokopelli Phone Lab</title>
-  <style>
-    :root {
-      font-size: 16px; /* 基準字體大小（桌機） */
-    }
 
-    @media (max-width: 600px) {
-      :root {
-        font-size: 14px; /* 手機裝置字體稍微縮小 */
-      }
-    }
+  <title>手機工坊·科科佩利｜Kokopelli Phone Lab｜台中太平手機維修・資料救援・快速修復</title>
 
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', 'Noto Sans TC', sans-serif;
-      background-color: #0a0a0a;
-      color: #f0f0f0;
-      line-height: 1.6;
-    }
+  <!-- ✅ 網站描述（搜尋摘要 + 社群摘要） -->
+  <meta name="description" content="台中手機維修推薦｜手機工坊·科科佩利主打快速維修、誠信報價、資料救援、電池與螢幕更換、水損修復等。結合未來感美學與專業技術，提供不只是修理，更是一種安心體驗。" />
 
-    header {
-      text-align: center;
-      padding: 2rem 1rem 1rem;
-    }
+  <!-- ✅ 中英雙語關鍵字強化 -->
+  <meta name="keywords" content="
+    台中手機維修, 手機螢幕更換, 電池更換, 資料救援, 手機泡水, 水損維修, 快速維修, 太平手機維修, 手機工坊, 科科佩利, 手機修理推薦, 
+    Taichung phone repair, screen replacement, battery replacement, data recovery, water damage repair, fast mobile service, mobile diagnosis, Kokopelli Phone Lab, Taiping phone repair, trusted phone technician, 2025 mobile trends
+  " />
 
-    header img {
-      height: 5rem;
-    }
+  <meta name="author" content="Kokopelli Phone Lab 手機工坊·科科佩利" />
 
-    nav {
-      margin: 1.2rem 0;
-      text-align: center;
-    }
+  <!-- ✅ 社群分享：Open Graph -->
+  <meta property="og:title" content="手機工坊·科科佩利｜未來感手機維修品牌・台中太平" />
+  <meta property="og:description" content="快速維修、誠信報價、資料救援｜科科佩利為你的手機保駕護航。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://una1103.github.io/kokopelli_phone_lab/" />
+  <meta property="og:image" content="https://una1103.github.io/kokopelli_phone_lab/images/og-image.jpg" />
+  <meta property="og:site_name" content="Kokopelli Phone Lab 手機工坊·科科佩利" />
 
-    nav a {
-      color: #00ffc8;
-      margin: 0 0.7rem;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 0.95rem;
-    }
+  <!-- ✅ Twitter 分享卡片 -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Kokopelli Phone Lab｜Taichung Fast & Trusted Phone Repair" />
+  <meta name="twitter:description" content="Quick screen replacement, battery repair & water damage rescue in Taiping, Taichung. Futuristic mobile repair you can trust." />
+  <meta name="twitter:image" content="https://una1103.github.io/kokopelli_phone_lab/images/og-image.jpg" />
 
-    nav a:hover {
-      color: #0ff;
-    }
-
-    .lang-switch {
-      text-align: center;
-      margin-top: 0.5rem;
-    }
-
-    .lang-switch button {
-      margin: 0 0.4rem;
-      padding: 0.4rem 1rem;
-      border: 1px solid #00ffc8;
-      background-color: transparent;
-      color: #00ffc8;
-      border-radius: 1rem;
-      cursor: pointer;
-      font-weight: bold;
-      font-size: 0.85rem;
-    }
-
-    .marquee-container {
-      overflow: hidden;
-      white-space: nowrap;
-      background-color: #00ffc8;
-      color: #0a0a0a;
-      padding: 0.6rem 0;
-      font-weight: bold;
-      font-size: 1rem;
-    }
-
-    .marquee {
-      display: inline-block;
-      padding-left: 100%;
-      animation: scroll-left 20s linear infinite;
-    }
-
-    @keyframes scroll-left {
-      0% { transform: translateX(0%); }
-      100% { transform: translateX(-100%); }
-    }
-
-    section {
-      max-width: 900px;
-      margin: 2.5rem auto;
-      padding: 0 1.2rem;
-    }
-
-    h1, h2 {
-      margin: 0.5rem 0;
-    }
-
-    #title {
-      font-size: 1.6rem;
-    }
-
-    #subtitle {
-      font-size: 1.2rem;
-      color: #aaa;
-    }
-
-    h2 {
-      border-left: 4px solid #00ffc8;
-      padding-left: 0.6rem;
-      margin-bottom: 1rem;
-      color: #00ffc8;
-      font-size: 1.3rem;
-    }
-
-    p {
-      font-size: 1rem;
-    }
-
-    iframe {
-      width: 100%;
-      height: 300px;
-      border: 0;
-      border-radius: 0.75rem;
-      margin-top: 1rem;
-    }
-
-    .contact {
-      text-align: center;
-      margin: 3rem 0;
-    }
-
-    .contact a {
-      display: inline-block;
-      margin: 0.5rem;
-      padding: 0.6rem 1.4rem;
-      border: 1px solid #00ffc8;
-      color: #00ffc8;
-      border-radius: 2rem;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 0.95rem;
-    }
-
-    .contact a:hover {
-      background-color: #00ffc8;
-      color: #0a0a0a;
-    }
-
-    footer {
-      background-color: #0a0a0a;
-      text-align: center;
-      padding: 2rem 1rem;
-      color: #888;
-      font-size: 0.85rem;
-      line-height: 1.5;
-    }
-
-    .footer-inner {
-      max-width: 900px;
-      margin: 0 auto;
-    }
-
-    @media (max-width: 600px) {
-      header img {
-        height: 4rem;
-      }
-
-      nav a {
-        display: block;
-        margin: 0.5rem 0;
-      }
-    }
-  </style>
+  <!-- ✅ 字體（可選） -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet" />
 </head>
 <body>
   <header>
