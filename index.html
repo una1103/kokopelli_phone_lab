@@ -3,36 +3,166 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>手機工坊·科科佩利 | Kokopelli Phone Lab</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', 'Noto Sans TC', sans-serif;
+      background-color: #0a0a0a;
+      color: #f0f0f0;
+    }
 
-  <title>手機工坊·科科佩利｜Kokopelli Phone Lab｜台中太平手機維修・資料救援・快速修復</title>
+    header {
+      text-align: center;
+      padding: 30px 20px 10px;
+    }
 
-  <!-- ✅ 網站描述（搜尋摘要 + 社群摘要） -->
-  <meta name="description" content="台中手機維修推薦｜手機工坊·科科佩利主打快速維修、誠信報價、資料救援、電池與螢幕更換、水損修復等。結合未來感美學與專業技術，提供不只是修理，更是一種安心體驗。" />
+    header img {
+      height: 80px;
+    }
 
-  <!-- ✅ 中英雙語關鍵字強化 -->
-  <meta name="keywords" content="
-    台中手機維修, 手機螢幕更換, 電池更換, 資料救援, 手機泡水, 水損維修, 快速維修, 太平手機維修, 手機工坊, 科科佩利, 手機修理推薦, 
-    Taichung phone repair, screen replacement, battery replacement, data recovery, water damage repair, fast mobile service, mobile diagnosis, Kokopelli Phone Lab, Taiping phone repair, trusted phone technician, 2025 mobile trends
-  " />
+    nav {
+      margin: 20px 0;
+      text-align: center;
+    }
 
-  <meta name="author" content="Kokopelli Phone Lab 手機工坊·科科佩利" />
+    nav a {
+      color: #00ffc8;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 0.9rem; /* 字體縮小 */
+    }
 
-  <!-- ✅ 社群分享：Open Graph -->
-  <meta property="og:title" content="手機工坊·科科佩利｜未來感手機維修品牌・台中太平" />
-  <meta property="og:description" content="快速維修、誠信報價、資料救援｜科科佩利為你的手機保駕護航。" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://una1103.github.io/kokopelli_phone_lab/" />
-  <meta property="og:image" content="https://una1103.github.io/kokopelli_phone_lab/images/og-image.jpg" />
-  <meta property="og:site_name" content="Kokopelli Phone Lab 手機工坊·科科佩利" />
+    nav a:hover {
+      color: #0ff;
+    }
 
-  <!-- ✅ Twitter 分享卡片 -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Kokopelli Phone Lab｜Taichung Fast & Trusted Phone Repair" />
-  <meta name="twitter:description" content="Quick screen replacement, battery repair & water damage rescue in Taiping, Taichung. Futuristic mobile repair you can trust." />
-  <meta name="twitter:image" content="https://una1103.github.io/kokopelli_phone_lab/images/og-image.jpg" />
+    .lang-switch {
+      text-align: center;
+      margin-top: 10px;
+    }
 
-  <!-- ✅ 字體（可選） -->
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet" />
+    .lang-switch button {
+      margin: 0 5px;
+      padding: 6px 12px;
+      border: 1px solid #00ffc8;
+      background-color: transparent;
+      color: #00ffc8;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 0.85rem;
+    }
+
+    .marquee-container {
+      overflow: hidden;
+      white-space: nowrap;
+      background-color: #00ffc8;
+      color: #0a0a0a;
+      padding: 10px 0;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+
+    .marquee {
+      display: inline-block;
+      padding-left: 100%;
+      animation: scroll-left 20s linear infinite;
+    }
+
+    @keyframes scroll-left {
+      0% {
+        transform: translateX(0%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+    section {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+      line-height: 1.8;
+    }
+
+    h2 {
+      border-left: 4px solid #00ffc8;
+      padding-left: 10px;
+      margin-bottom: 20px;
+      color: #00ffc8;
+      font-size: 1.3rem;
+    }
+
+    .testimonial {
+      background-color: #111;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 10px #00ffc8aa;
+    }
+
+    .testimonial .author {
+      font-weight: bold;
+      color: #00ffc8;
+      margin-top: 10px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: 0;
+      border-radius: 12px;
+      margin-top: 10px;
+    }
+
+    .contact {
+      text-align: center;
+      margin: 40px 0;
+    }
+
+    .contact a {
+      display: inline-block;
+      margin: 10px;
+      padding: 10px 20px;
+      border: 1px solid #00ffc8;
+      color: #00ffc8;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .contact a:hover {
+      background-color: #00ffc8;
+      color: #0a0a0a;
+    }
+
+    footer {
+      background-color: #0a0a0a;
+      text-align: center;
+      padding: 40px 20px;
+      color: #888;
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    .footer-inner {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 600px) {
+      header img {
+        height: 60px;
+      }
+
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -73,10 +203,10 @@
     <p>📍 台中市太平區宜佳街43號</p>
     <iframe 
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3643.0247306014984!2d120.7381552!3d24.1354219!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3469197cd73093b5%3A0x41dbb7d19a41fa6a!2zNDEx5Y-w5Lit5biC5rKz5Y2A5a6J6I-v6KGXNDPomZ8!5e0!3m2!1szh-TW!2stw!4v1718789018836!5m2!1szh-TW!2stw"
-      allowfullscreen
+      allowfullscreen=""
       loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
+      referrerpolicy="no-referrer-when-downgrade"
+    ></iframe>
   </section>
 
   <section class="contact">
