@@ -1,0 +1,21 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://una1103.github.io/kokopelli_phone_lab/sitemap.xml
+
+# Googlebot-friendly directives
+User-agent: Googlebot
+Allow: /
+
+# Bingbot-friendly directives
+User-agent: Bingbot
+Allow: /
+
+# Prevent indexing of unnecessary files
+Disallow: /google410b7fe8a3646a42.html$
+Disallow: /*.zip$
+Disallow: /*.rar$
+Disallow: /*.psd$
+Disallow: /*.ai$
+
+# End of file
